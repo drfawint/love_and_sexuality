@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Normenwandel in Liebe und Sexualität</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Bilendi-Pilot · Dynamische Gutachteransicht</p>
+          <h1>Normenwandel in Liebe und Sexualität</h1>
+          <p class="hero-text">
+            Interaktive Vergleichsseite für Gutachterinnen und Gutachter des Forschungsantrags.
+            Zwei Subgruppen können frei über Geschlecht, Medianalter und Bildungsprofil kombiniert werden,
+            um Unterschiede in Beziehungserfahrungen, Identitätslagen und Beziehungsmustern sichtbar zu machen.
+          </p>
+          <div class="hero-meta">
+            <span>Dr. Fabian Winter</span>
+            <span>Dr. Antonia Velicu</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-stat">
+            <span class="hero-stat-label">Datengrundlage</span>
+            <strong id="hero-sample-size">425 Fälle</strong>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">Vergleichslogik</span>
+            <strong>2 frei definierte Gruppen</strong>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">Subgruppen</span>
+            <strong>Alter, Geschlecht, Bildung</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-layout">
+        <aside class="control-column">
+          <section class="card preset-card">
+            <div class="section-head compact">
+              <div>
+                <p class="section-kicker">Schnellstart</p>
+                <h2>Vergleichsvorlagen</h2>
+              </div>
+            </div>
+            <div class="preset-grid">
+              <button class="preset-btn" data-preset="women-men">Frauen vs. Männer</button>
+              <button class="preset-btn" data-preset="young-women-young-men">Junge Frauen vs. junge Männer</button>
+              <button class="preset-btn" data-preset="young-old">Jünger vs. älter</button>
+              <button class="preset-btn" data-preset="academic-nonacademic">Uni / studiennah vs. ohne Uni</button>
+            </div>
+          </section>
+
+          <section class="card control-card">
+            <div class="section-head compact">
+              <div>
+                <p class="section-kicker">Subgruppen</p>
+                <h2>Gruppe A</h2>
+              </div>
+            </div>
+            <div id="group-a-controls"></div>
+          </section>
+
+          <section class="card control-card">
+            <div class="section-head compact">
+              <div>
+                <p class="section-kicker">Subgruppen</p>
+                <h2>Gruppe B</h2>
+              </div>
+            </div>
+            <div id="group-b-controls"></div>
+          </section>
+
+          <section class="card note-card">
+            <p class="note-title">Hinweis zur Bildungsgruppe</p>
+            <p id="education-note"></p>
+          </section>
+        </aside>
+
+        <section class="content-column">
+          <section class="metrics-grid" id="metrics-grid"></section>
+
+          <section class="card insight-card" id="insight-card"></section>
+
+          <section class="card chart-card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Vergleich 1</p>
+                <h2>Erfahrung mit Beziehungstypen</h2>
+              </div>
+              <div class="toolbar">
+                <label class="toolbar-label" for="experience-sort">Sortierung</label>
+                <select id="experience-sort">
+                  <option value="gap">Nach Differenz</option>
+                  <option value="prevalence">Nach Häufigkeit</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-meta" id="experience-meta"></div>
+            <div class="experience-chart" id="experience-chart"></div>
+          </section>
+
+          <section class="card chart-card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Vergleich 2</p>
+                <h2>Identität, Einstellungen und Beziehungsstatus</h2>
+              </div>
+              <div class="toolbar">
+                <label class="toolbar-label" for="outcome-select">Variable</label>
+                <select id="outcome-select"></select>
+              </div>
+            </div>
+            <div class="stacked-wrapper" id="stacked-wrapper"></div>
+            <div class="category-table" id="category-table"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <noscript>Für diese Seite muss JavaScript aktiviert sein.</noscript>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>
