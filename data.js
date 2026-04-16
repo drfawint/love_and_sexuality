@@ -15,31 +15,37 @@ window.BILENDI_DASHBOARD_DATA =
       {
         "key": "identity",
         "label": "Monogamie-Identität",
+        "questionText": "Horchen Sie einmal in sich hinein. Fühlen Sie sich eher monogam oder eher nicht-monogam?",
         "categories": ["Vollständig monogam", "Eher monogam", "Phasenweise monogam, phasenweise nicht-monogam", "Eher nicht-monogam", "Vollständig nicht-monogam"]
       },
       {
         "key": "identityimportance",
         "label": "Wichtigkeit dieser Identität",
+        "questionText": "Wie wichtig ist Ihnen dieser Aspekt Ihrer Identität (monogam oder nicht-monogam)?",
         "categories": ["Gar nicht wichtig", "Eher nicht wichtig", "Teils / teils", "Eher wichtig", "Sehr wichtig"]
       },
       {
         "key": "identitythink",
         "label": "Reflexion über Monogamie vs. Nicht-Monogamie",
+        "questionText": "Bitte geben Sie an, inwiefern die folgende Aussage auf Sie zutrifft: Ich habe viel darüber nachgedacht, ob Monogamie oder Nicht-Monogamie besser zu mir passt.",
         "categories": ["Trifft überhaupt nicht zu", "Trifft eher nicht zu", "Teils/teils", "Trifft eher zu", "Trifft voll zu"]
       },
       {
         "key": "currentlyinrel",
         "label": "Aktuelle Beziehungssituation",
+        "questionText": "Führen Sie derzeit eine oder mehrere Beziehungen?",
         "categories": ["Ja, eine", "Ja, mehrere", "Nein, aber ich hatte schon mal eine Beziehung", "Nein, und ich hatte noch nie eine Beziehung"]
       },
       {
         "key": "monoslidercur",
         "label": "Aktuelle Beziehung: monogam vs. nicht-monogam",
+        "questionText": "Bitte denken Sie einmal über ihr Beziehungsleben nach. Was beschreibt Ihre derzeitige(n) Beziehung(en) am besten?",
         "categories": ["Vollständig monogam", "Eher monogam", "Phasenweise monogam, phasenweise nicht-monogam", "Eher nicht-monogam", "Vollständig nicht-monogam"]
       },
       {
         "key": "monosliderpast",
         "label": "Letzte Beziehung: monogam vs. nicht-monogam",
+        "questionText": "Bitte denken Sie einmal über ihr Beziehungsleben nach. Was beschreibt Ihre letzte(n) Beziehung(en) am besten?",
         "categories": ["Vollständig monogam", "Eher monogam", "Phasenweise monogam, phasenweise nicht-monogam", "Eher nicht-monogam", "Vollständig nicht-monogam"]
       }
     ]

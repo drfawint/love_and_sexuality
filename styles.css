@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/source-sans-3-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/source-sans-3-600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/source-sans-3-700.ttf") format("truetype");
+}
+
 :root {
   --uzh-blue: #0028a5;
   --uzh-blue-link: #365dd5;
@@ -617,6 +641,34 @@ select:focus {
   flex-wrap: wrap;
 }
 
+.selected-question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.selected-question {
+  margin: -4px 0 18px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--uzh-blue-link);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: linear-gradient(90deg, rgba(0, 40, 165, 0.08), rgba(245, 245, 251, 0.92));
+  color: var(--uzh-blue-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.selected-question-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--grey-strong);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .chart-meta {
   display: flex;
   flex-wrap: wrap;
@@ -899,6 +951,129 @@ select:focus {
   font-size: 0.82rem;
 }
 
+.site-footer {
+  margin-top: 22px;
+  padding: 20px 24px;
+  border: 1px solid var(--grey-medium);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, #ffffff 0%, var(--blue-light) 100%);
+  box-shadow: var(--shadow);
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-footer-kicker {
+  margin: 0 0 6px;
+  color: var(--grey-strong);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-footer-copy {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--grey);
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-footer-nav a,
+.legal-back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 40, 165, 0.18);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--uzh-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+}
+
+.site-footer-nav a:hover,
+.site-footer-nav a:focus-visible,
+.legal-back-link:hover,
+.legal-back-link:focus-visible {
+  border-color: var(--uzh-blue);
+  background: rgba(0, 40, 165, 0.06);
+  transform: translateY(-1px);
+}
+
+.legal-hero {
+  margin-bottom: 0;
+  border-top: 6px solid var(--uzh-blue);
+  background: linear-gradient(180deg, #ffffff 0%, var(--blue-light) 100%);
+}
+
+.legal-head {
+  align-items: start;
+}
+
+.legal-flow {
+  margin-top: 22px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.legal-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.legal-panel {
+  padding: 18px 20px;
+  border: 1px solid var(--grey-medium);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.legal-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+}
+
+.legal-panel p {
+  margin: 0;
+  color: var(--grey);
+}
+
+.legal-panel p + p {
+  margin-top: 0.85rem;
+}
+
+.legal-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--grey);
+}
+
+.legal-list li + li {
+  margin-top: 0.55rem;
+}
+
+.legal-note {
+  margin: 18px 0 0;
+  color: var(--grey);
+}
+
 noscript {
   display: block;
   width: calc(100vw - 32px);
@@ -914,7 +1089,9 @@ noscript {
   .hero,
   .dashboard-layout,
   .metrics-grid,
+  .legal-grid,
   .stacked-wrapper,
+  .selected-question-grid,
   .team-grid,
   .proposal-highlights {
     grid-template-columns: 1fr;
@@ -931,6 +1108,11 @@ noscript {
 
   .hero-brand {
     align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer-inner {
+    align-items: start;
     flex-direction: column;
   }
 
@@ -997,6 +1179,11 @@ noscript {
   .section-head {
     align-items: start;
     flex-direction: column;
+  }
+
+  .site-footer,
+  .legal-panel {
+    padding: 18px;
   }
 
   .metrics-grid,

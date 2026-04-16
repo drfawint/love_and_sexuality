@@ -46,9 +46,11 @@ const state = {
 const ui = {
   overallMetricsGrid: document.getElementById("overall-metrics-grid"),
   overallIdentityOutcomeSelect: document.getElementById("overall-identity-outcome-select"),
+  overallIdentityQuestionText: document.getElementById("overall-identity-question-text"),
   overallIdentityStackedWrapper: document.getElementById("overall-identity-stacked-wrapper"),
   overallIdentityCategoryTable: document.getElementById("overall-identity-category-table"),
   overallRelationshipOutcomeSelect: document.getElementById("overall-relationship-outcome-select"),
+  overallRelationshipQuestionText: document.getElementById("overall-relationship-question-text"),
   overallRelationshipStackedWrapper: document.getElementById("overall-relationship-stacked-wrapper"),
   overallRelationshipCategoryTable: document.getElementById("overall-relationship-category-table"),
   overallExperienceSort: document.getElementById("overall-experience-sort"),
@@ -60,17 +62,20 @@ const ui = {
   experienceMeta: document.getElementById("experience-meta"),
   experienceChart: document.getElementById("experience-chart"),
   identityOutcomeSelect: document.getElementById("identity-outcome-select"),
+  identityQuestionText: document.getElementById("identity-question-text"),
   identityStackedWrapper: document.getElementById("identity-stacked-wrapper"),
   identityCategoryTable: document.getElementById("identity-category-table"),
   relationshipOutcomeSelect: document.getElementById("relationship-outcome-select"),
+  relationshipQuestionText: document.getElementById("relationship-question-text"),
   relationshipStackedWrapper: document.getElementById("relationship-stacked-wrapper"),
   relationshipCategoryTable: document.getElementById("relationship-category-table"),
   experienceSort: document.getElementById("experience-sort"),
   bivariateRowSelect: document.getElementById("bivariate-row-select"),
   bivariateColSelect: document.getElementById("bivariate-col-select"),
+  bivariateRowQuestionText: document.getElementById("bivariate-row-question-text"),
+  bivariateColQuestionText: document.getElementById("bivariate-col-question-text"),
   bivariateMeta: document.getElementById("bivariate-meta"),
   bivariateTable: document.getElementById("bivariate-table"),
-  educationNote: document.getElementById("education-note"),
   heroSampleSize: document.getElementById("hero-sample-size"),
 };
 
@@ -111,6 +116,26 @@ function appendSelectOptions(selectElement, items) {
 
 function appendChildren(parent, children) {
   children.forEach((child) => parent.appendChild(child));
+}
+
+function getVariableConfig(key) {
+  return bivariateMap.get(key) || outcomeMap.get(key) || null;
+}
+
+function renderQuestionText(target, selectedKey, prefix = "Originalfrage") {
+  const questionText = getVariableConfig(selectedKey)?.questionText;
+
+  if (!questionText) {
+    target.hidden = true;
+    target.innerHTML = "";
+    return;
+  }
+
+  target.hidden = false;
+  target.innerHTML = `
+    <span class="selected-question-label">${escapeHtml(prefix)}</span>
+    ${escapeHtml(questionText)}
+  `;
 }
 
 function experienceValues(record) {
@@ -712,6 +737,8 @@ function renderBivariateTable(allRecords) {
 
 function renderAll() {
   renderOverallMetrics(records);
+  renderQuestionText(ui.overallIdentityQuestionText, state.overallIdentityOutcome);
+  renderQuestionText(ui.overallRelationshipQuestionText, state.overallRelationshipOutcome);
   renderSingleOutcomeChart(
     records,
     state.overallIdentityOutcome,
@@ -734,6 +761,8 @@ function renderAll() {
 
   renderMetrics(groupARecords, groupBRecords);
   renderExperienceChart(groupARecords, groupBRecords);
+  renderQuestionText(ui.identityQuestionText, state.selectedIdentityOutcome);
+  renderQuestionText(ui.relationshipQuestionText, state.selectedRelationshipOutcome);
   renderOutcomeChart(
     groupARecords,
     groupBRecords,
@@ -748,11 +777,12 @@ function renderAll() {
     ui.relationshipStackedWrapper,
     ui.relationshipCategoryTable
   );
+  renderQuestionText(ui.bivariateRowQuestionText, state.bivariateRow, "Zeilenfrage");
+  renderQuestionText(ui.bivariateColQuestionText, state.bivariateCol, "Spaltenfrage");
   renderBivariateTable(records);
 }
 
 function init() {
-  ui.educationNote.textContent = meta.educationNote;
   ui.heroSampleSize.textContent = `${meta.sampleSize} Fälle`;
 
   appendSelectOptions(

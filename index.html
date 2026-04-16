@@ -5,14 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Normenwandel in Liebe und Sexualität</title>
     <link rel="canonical" href="https://drfawint.github.io/love_and_sexuality/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="page-shell">
-      <section class="card proposal-intro">
+ 
+
+      <header class="hero">
+        <div class="hero-brand">
+          <a class="brand-lockup" href="https://www.uzh.ch/de.html" target="_blank" rel="noreferrer">
+            <span class="brand-lockup-title">Universität Zürich</span>
+          </a>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow"></p>
+          <h1>Normenwandel in Liebe und Sexualität</h1>
+          <h2>Pilotstudie</h2>
+         
+          <div class="hero-meta">
+            <span>Prof. Dr. Heiko Rauhut</span>
+            <span>Dr. Antonia Velicu</span>
+            <span>Dr. Fabian Winter</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-stat hero-stat-primary">
+            <span class="hero-stat-label">Datengrundlage</span>
+            <strong id="hero-sample-size">425 Fälle</strong>
+          </div>
+
+          <div class="hero-stat">
+            <span class="hero-stat-label">Subgruppen</span>
+            <strong>Alter, Geschlecht, Bildung</strong>
+          </div>
+        </div>
+      </header>
+      <main class="page-flow">
+        <section class="overview-block">
+          <div class="section-head block-head">
+           
+          </div>
+     <section class="card proposal-intro">
         <div class="section-head compact">
           <div>
             <p class="section-kicker">Proposal Context</p>
@@ -53,54 +86,8 @@
           </details>
         </div>
       </section>
-
-      <header class="hero">
-        <div class="hero-brand">
-          <a class="brand-lockup" href="https://www.uzh.ch/de.html" target="_blank" rel="noreferrer">
-            <span class="brand-lockup-title">Universität Zürich</span>
-            <span class="brand-lockup-subtitle">Bilendi-Pilot · Dynamische Gutachteransicht</span>
-          </a>
-          <p class="brand-context">Gesamtüberblick, Subgruppenvergleiche und bivariate Exploration in einer Oberfläche</p>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow">Interaktive Vergleichsseite</p>
-          <h1>Normenwandel in Liebe und Sexualität</h1>
-          <p class="hero-text">
-            Die Seite führt vom ungefilterten Gesamtbild über frei definierte Subgruppenvergleiche
-            bis zur Exploration bivariater Zusammenhänge zwischen zentralen Beziehungs- und Strukturmerkmalen.
-          </p>
-          <div class="hero-meta">
-            <span>Prof. Dr. Heiko Rauhut</span>
-            <span>Dr. Antonia Velicu</span>
-            <span>Dr. Fabian Winter</span>
-          </div>
-        </div>
-        <div class="hero-panel">
-          <div class="hero-stat hero-stat-primary">
-            <span class="hero-stat-label">Datengrundlage</span>
-            <strong id="hero-sample-size">425 Fälle</strong>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-label">Analysepfade</span>
-            <strong>Gesamtbild, Subgruppen, Bivariat</strong>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-label">Subgruppen</span>
-            <strong>Alter, Geschlecht, Bildung</strong>
-          </div>
-        </div>
-      </header>
-      <main class="page-flow">
-        <section class="overview-block">
-          <div class="section-head block-head">
-            <div>
-              <p class="section-kicker">Gesamtdaten</p>
-              <h2>Überblick ohne Subgruppen</h2>
-              <p class="block-copy">Diese erste Ebene zeigt die Verteilungen in der gesamten Bilendi-Stichprobe, bevor einzelne Teilgruppen gegenübergestellt werden.</p>
-            </div>
-          </div>
-
           <section class="metrics-grid overall-metrics-grid" id="overall-metrics-grid"></section>
+
 
           <section class="card chart-card">
             <div class="section-head">
@@ -108,14 +95,18 @@
                 <p class="section-kicker">Identität</p>
                 <h2>Monogamie-Identität, Wichtigkeit und Reflexion</h2>
               </div>
+
+
               <div class="toolbar">
                 <label class="toolbar-label" for="overall-identity-outcome-select">Variable</label>
                 <select id="overall-identity-outcome-select"></select>
               </div>
             </div>
+            <p class="selected-question" id="overall-identity-question-text" aria-live="polite" hidden></p>
             <div class="stacked-wrapper single-stack-wrapper" id="overall-identity-stacked-wrapper"></div>
             <div class="category-table" id="overall-identity-category-table"></div>
           </section>
+
 
           <section class="card chart-card">
             <div class="section-head">
@@ -128,6 +119,7 @@
                 <select id="overall-relationship-outcome-select"></select>
               </div>
             </div>
+            <p class="selected-question" id="overall-relationship-question-text" aria-live="polite" hidden></p>
             <div class="stacked-wrapper single-stack-wrapper" id="overall-relationship-stacked-wrapper"></div>
             <div class="category-table" id="overall-relationship-category-table"></div>
           </section>
@@ -181,11 +173,6 @@
                 </div>
                 <div id="group-b-controls"></div>
               </section>
-
-              <section class="card note-card">
-                <p class="note-title">Hinweis zur Bildungsgruppe</p>
-                <p id="education-note"></p>
-              </section>
             </aside>
 
             <section class="content-column">
@@ -202,6 +189,7 @@
                     <select id="identity-outcome-select"></select>
                   </div>
                 </div>
+                <p class="selected-question" id="identity-question-text" aria-live="polite" hidden></p>
                 <div class="stacked-wrapper" id="identity-stacked-wrapper"></div>
                 <div class="category-table" id="identity-category-table"></div>
               </section>
@@ -217,6 +205,7 @@
                     <select id="relationship-outcome-select"></select>
                   </div>
                 </div>
+                <p class="selected-question" id="relationship-question-text" aria-live="polite" hidden></p>
                 <div class="stacked-wrapper" id="relationship-stacked-wrapper"></div>
                 <div class="category-table" id="relationship-category-table"></div>
               </section>
@@ -260,6 +249,10 @@
               </div>
             </div>
           </div>
+          <div class="selected-question-grid">
+            <p class="selected-question" id="bivariate-row-question-text" aria-live="polite" hidden></p>
+            <p class="selected-question" id="bivariate-col-question-text" aria-live="polite" hidden></p>
+          </div>
           <div class="chart-meta" id="bivariate-meta"></div>
           <div class="bivariate-table-wrap" id="bivariate-table"></div>
         </section>
@@ -293,6 +286,22 @@
           </div>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div>
+            <p class="site-footer-kicker">Rechtliches</p>
+            <p class="site-footer-copy">
+              Diese Projektseite verwendet nach aktuellem Stand keine Analyse- oder Marketing-Cookies.
+              Die eingesetzte Schrift ist lokal eingebunden; interaktive Filter werden nur im Browser verarbeitet.
+            </p>
+          </div>
+          <nav class="site-footer-nav" aria-label="Footer-Navigation">
+            <a href="./index.html">Startseite</a>
+            <a href="./rechtliches.html">Impressum &amp; Datenschutz</a>
+          </nav>
+        </div>
+      </footer>
     </div>
 
     <noscript>Für diese Seite muss JavaScript aktiviert sein.</noscript>
