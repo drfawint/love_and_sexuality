@@ -4,32 +4,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Normenwandel in Liebe und Sexualität</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://drfawint.github.io/love_and_sexuality/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <div class="page-shell">
+      <section class="card proposal-intro">
+        <div class="section-head compact">
+          <div>
+            <p class="section-kicker">Proposal Context</p>
+            <h2>Relationship pluralization and representative measurement</h2>
+          </div>
+        </div>
+        <div class="proposal-summary">
+          <p class="proposal-lead">
+            Representative surveys still capture intimate relationships through a largely mono-normative lens. This module closes that measurement gap and links relationship diversity to inequality, resources and well-being in Switzerland.
+          </p>
+          <div class="proposal-highlights">
+            <article class="proposal-highlight">
+              <span class="proposal-highlight-label">Problem</span>
+              <strong>Major surveys miss CNM, polyamory and plural relationship forms.</strong>
+            </article>
+            <article class="proposal-highlight">
+              <span class="proposal-highlight-label">Innovation</span>
+              <strong>Piloted items distinguish identity, lived configuration and relationship spectrum.</strong>
+            </article>
+            <article class="proposal-highlight">
+              <span class="proposal-highlight-label">Payoff</span>
+              <strong>First representative Swiss analysis of relationship pluralization and social inequality.</strong>
+            </article>
+          </div>
+          <details class="proposal-details">
+            <summary>Show background and rationale</summary>
+            <div class="proposal-copy">
+              <p>
+                Intimate relationships are undergoing profound transformation. While mid-20th century societies converged around monogamous marriage and the nuclear family, recent decades have seen marked pluralization, including consensual non-monogamy (CNM), polyamory, and diverse cohabitation arrangements. Yet representative survey research has failed to keep pace: major instruments continue to measure relationships through a mono-normative lens, recording only legal marital status or single partnerships. As a result, we lack basic population-level estimates of how common non-monogamous arrangements are, who practices them, and under what conditions.
+              </p>
+              <p>
+                This proposal addresses two interrelated gaps. First, it introduces survey items extensively piloted across three waves with a combined sample of N = 920, with results publicly available at <a href="https://drfawint.github.io/love_and_sexuality/" target="_blank" rel="noreferrer">https://drfawint.github.io/love_and_sexuality/</a>, capable of capturing relationship diversity in a representative Swiss sample. The items distinguish between subjective relationship orientation and lived relationship configuration, covering a broad spectrum from monogamy to relationship anarchy. Second, it embeds these measures within a resource-theoretical framework. Existing CNM research treats non-monogamy primarily as an ideological commitment or identity choice, largely ignoring how economic, temporal, and cultural resources may structure both access to and feasibility of non-monogamous arrangements.
+              </p>
+              <p>
+                Building on the MOSAiCH 2027 / ISSP Social Networks and Social Resources module, which already captures income, education, religiosity, social support, and well-being, our proposed add-on module supplies the missing element: a direct, empirically grounded measure of relationship diversity. This enables a representative analysis of how relationship pluralization in Switzerland intersects with social inequality, normative change and individual well-being.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
       <header class="hero">
+        <div class="hero-brand">
+          <a class="brand-lockup" href="https://www.uzh.ch/de.html" target="_blank" rel="noreferrer">
+            <span class="brand-lockup-title">Universität Zürich</span>
+            <span class="brand-lockup-subtitle">Bilendi-Pilot · Dynamische Gutachteransicht</span>
+          </a>
+          <p class="brand-context">Gesamtüberblick, Subgruppenvergleiche und bivariate Exploration in einer Oberfläche</p>
+        </div>
         <div class="hero-copy">
-          <p class="eyebrow">Bilendi-Pilot · Dynamische Gutachteransicht</p>
+          <p class="eyebrow">Interaktive Vergleichsseite</p>
           <h1>Normenwandel in Liebe und Sexualität</h1>
           <p class="hero-text">
-            Interaktive Vergleichsseite für Gutachterinnen und Gutachter des Forschungsantrags.
-            Zwei Subgruppen können frei über Geschlecht, Medianalter und Bildungsprofil kombiniert werden,
-            um Unterschiede in Beziehungserfahrungen, Identitätslagen und Beziehungsmustern sichtbar zu machen.
+            Die Seite führt vom ungefilterten Gesamtbild über frei definierte Subgruppenvergleiche
+            bis zur Exploration bivariater Zusammenhänge zwischen zentralen Beziehungs- und Strukturmerkmalen.
           </p>
           <div class="hero-meta">
-            <span>Dr. Fabian Winter</span>
+            <span>Prof. Dr. Heiko Rauhut</span>
             <span>Dr. Antonia Velicu</span>
+            <span>Dr. Fabian Winter</span>
           </div>
         </div>
         <div class="hero-panel">
-          <div class="hero-stat">
+          <div class="hero-stat hero-stat-primary">
             <span class="hero-stat-label">Datengrundlage</span>
             <strong id="hero-sample-size">425 Fälle</strong>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat-label">Vergleichslogik</span>
-            <strong>2 frei definierte Gruppen</strong>
+            <span class="hero-stat-label">Analysepfade</span>
+            <strong>Gesamtbild, Subgruppen, Bivariat</strong>
           </div>
           <div class="hero-stat">
             <span class="hero-stat-label">Subgruppen</span>
@@ -37,93 +90,213 @@
           </div>
         </div>
       </header>
-
-      <main class="dashboard-layout">
-        <aside class="control-column">
-          <section class="card preset-card">
-            <div class="section-head compact">
-              <div>
-                <p class="section-kicker">Schnellstart</p>
-                <h2>Vergleichsvorlagen</h2>
-              </div>
+      <main class="page-flow">
+        <section class="overview-block">
+          <div class="section-head block-head">
+            <div>
+              <p class="section-kicker">Gesamtdaten</p>
+              <h2>Überblick ohne Subgruppen</h2>
+              <p class="block-copy">Diese erste Ebene zeigt die Verteilungen in der gesamten Bilendi-Stichprobe, bevor einzelne Teilgruppen gegenübergestellt werden.</p>
             </div>
-            <div class="preset-grid">
-              <button class="preset-btn" data-preset="women-men">Frauen vs. Männer</button>
-              <button class="preset-btn" data-preset="young-women-young-men">Junge Frauen vs. junge Männer</button>
-              <button class="preset-btn" data-preset="young-old">Jünger vs. älter</button>
-              <button class="preset-btn" data-preset="academic-nonacademic">Uni / studiennah vs. ohne Uni</button>
-            </div>
-          </section>
+          </div>
 
-          <section class="card control-card">
-            <div class="section-head compact">
-              <div>
-                <p class="section-kicker">Subgruppen</p>
-                <h2>Gruppe A</h2>
-              </div>
-            </div>
-            <div id="group-a-controls"></div>
-          </section>
-
-          <section class="card control-card">
-            <div class="section-head compact">
-              <div>
-                <p class="section-kicker">Subgruppen</p>
-                <h2>Gruppe B</h2>
-              </div>
-            </div>
-            <div id="group-b-controls"></div>
-          </section>
-
-          <section class="card note-card">
-            <p class="note-title">Hinweis zur Bildungsgruppe</p>
-            <p id="education-note"></p>
-          </section>
-        </aside>
-
-        <section class="content-column">
-          <section class="metrics-grid" id="metrics-grid"></section>
-
-          <section class="card insight-card" id="insight-card"></section>
+          <section class="metrics-grid overall-metrics-grid" id="overall-metrics-grid"></section>
 
           <section class="card chart-card">
             <div class="section-head">
               <div>
-                <p class="section-kicker">Vergleich 1</p>
-                <h2>Erfahrung mit Beziehungstypen</h2>
+                <p class="section-kicker">Identität</p>
+                <h2>Monogamie-Identität, Wichtigkeit und Reflexion</h2>
               </div>
               <div class="toolbar">
-                <label class="toolbar-label" for="experience-sort">Sortierung</label>
-                <select id="experience-sort">
-                  <option value="gap">Nach Differenz</option>
+                <label class="toolbar-label" for="overall-identity-outcome-select">Variable</label>
+                <select id="overall-identity-outcome-select"></select>
+              </div>
+            </div>
+            <div class="stacked-wrapper single-stack-wrapper" id="overall-identity-stacked-wrapper"></div>
+            <div class="category-table" id="overall-identity-category-table"></div>
+          </section>
+
+          <section class="card chart-card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Beziehungen</p>
+                <h2>Aktuelle und vergangene Beziehungskonstellation</h2>
+              </div>
+              <div class="toolbar">
+                <label class="toolbar-label" for="overall-relationship-outcome-select">Variable</label>
+                <select id="overall-relationship-outcome-select"></select>
+              </div>
+            </div>
+            <div class="stacked-wrapper single-stack-wrapper" id="overall-relationship-stacked-wrapper"></div>
+            <div class="category-table" id="overall-relationship-category-table"></div>
+          </section>
+
+          <section class="card chart-card">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Erfahrungen</p>
+                <h2>Erfahrung mit Beziehungstypen in der Gesamtstichprobe</h2>
+              </div>
+              <div class="toolbar">
+                <label class="toolbar-label" for="overall-experience-sort">Sortierung</label>
+                <select id="overall-experience-sort">
                   <option value="prevalence">Nach Häufigkeit</option>
+                  <option value="alphabetical">Alphabetisch</option>
                 </select>
               </div>
             </div>
-            <div class="chart-meta" id="experience-meta"></div>
-            <div class="experience-chart" id="experience-chart"></div>
+            <div class="chart-meta" id="overall-experience-meta"></div>
+            <div class="experience-chart" id="overall-experience-chart"></div>
           </section>
+        </section>
 
-          <section class="card chart-card">
-            <div class="section-head">
-              <div>
-                <p class="section-kicker">Vergleich 2</p>
-                <h2>Identität, Einstellungen und Beziehungsstatus</h2>
+        <section class="subgroup-block">
+          <div class="section-head block-head">
+            <div>
+              <p class="section-kicker">Subgruppen</p>
+              <h2>Vergleich zweier frei definierter Gruppen</h2>
+              <p class="block-copy">Im zweiten Schritt können zwei Teilgruppen über Geschlecht, Medianalter und Bildungsprofil gegeneinander gestellt werden.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-layout">
+            <aside class="control-column">
+              <section class="card control-card">
+                <div class="section-head compact">
+                  <div>
+                    <p class="section-kicker">Subgruppen</p>
+                    <h2>Gruppe A</h2>
+                  </div>
+                </div>
+                <div id="group-a-controls"></div>
+              </section>
+
+              <section class="card control-card">
+                <div class="section-head compact">
+                  <div>
+                    <p class="section-kicker">Subgruppen</p>
+                    <h2>Gruppe B</h2>
+                  </div>
+                </div>
+                <div id="group-b-controls"></div>
+              </section>
+
+              <section class="card note-card">
+                <p class="note-title">Hinweis zur Bildungsgruppe</p>
+                <p id="education-note"></p>
+              </section>
+            </aside>
+
+            <section class="content-column">
+              <section class="metrics-grid" id="metrics-grid"></section>
+
+              <section class="card chart-card">
+                <div class="section-head">
+                  <div>
+                    <p class="section-kicker">Identität</p>
+                    <h2>Monogamie-Identität, Wichtigkeit und Reflexion</h2>
+                  </div>
+                  <div class="toolbar">
+                    <label class="toolbar-label" for="identity-outcome-select">Variable</label>
+                    <select id="identity-outcome-select"></select>
+                  </div>
+                </div>
+                <div class="stacked-wrapper" id="identity-stacked-wrapper"></div>
+                <div class="category-table" id="identity-category-table"></div>
+              </section>
+
+              <section class="card chart-card">
+                <div class="section-head">
+                  <div>
+                    <p class="section-kicker">Beziehungen</p>
+                    <h2>Aktuelle und vergangene Beziehungskonstellation</h2>
+                  </div>
+                  <div class="toolbar">
+                    <label class="toolbar-label" for="relationship-outcome-select">Variable</label>
+                    <select id="relationship-outcome-select"></select>
+                  </div>
+                </div>
+                <div class="stacked-wrapper" id="relationship-stacked-wrapper"></div>
+                <div class="category-table" id="relationship-category-table"></div>
+              </section>
+
+              <section class="card chart-card">
+                <div class="section-head">
+                  <div>
+                    <p class="section-kicker">Erfahrungen</p>
+                    <h2>Erfahrung mit Beziehungstypen</h2>
+                  </div>
+                  <div class="toolbar">
+                    <label class="toolbar-label" for="experience-sort">Sortierung</label>
+                    <select id="experience-sort">
+                      <option value="gap">Nach Differenz</option>
+                      <option value="prevalence">Nach Häufigkeit</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="chart-meta" id="experience-meta"></div>
+                <div class="experience-chart" id="experience-chart"></div>
+              </section>
+            </section>
+          </div>
+        </section>
+
+        <section class="card bivariate-card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Bivariat</p>
+              <h2>Bivariate Zusammenhänge explorieren</h2>
+              <p class="block-copy">Die Kreuztabelle zeigt Zusammenhänge für die Gesamtstichprobe. Zellen berichten Häufigkeiten und Zeilenprozente für alle Fälle mit gültigen Angaben in beiden Variablen.</p>
+            </div>
+            <div class="toolbar toolbar-bivariate">
+              <div class="toolbar-field">
+                <label class="toolbar-label" for="bivariate-row-select">Zeilenvariable</label>
+                <select id="bivariate-row-select"></select>
               </div>
-              <div class="toolbar">
-                <label class="toolbar-label" for="outcome-select">Variable</label>
-                <select id="outcome-select"></select>
+              <div class="toolbar-field">
+                <label class="toolbar-label" for="bivariate-col-select">Spaltenvariable</label>
+                <select id="bivariate-col-select"></select>
               </div>
             </div>
-            <div class="stacked-wrapper" id="stacked-wrapper"></div>
-            <div class="category-table" id="category-table"></div>
-          </section>
+          </div>
+          <div class="chart-meta" id="bivariate-meta"></div>
+          <div class="bivariate-table-wrap" id="bivariate-table"></div>
+        </section>
+
+        <section class="card team-strip">
+          <div class="section-head compact">
+            <div>
+              <p class="section-kicker">Projektteam</p>
+              <h2>Ansprechpersonen</h2>
+            </div>
+          </div>
+          <div class="team-grid">
+            <figure class="team-card">
+              <img src="./HeikoRauhut-400.jpg.jpg" alt="Porträt von Heiko Rauhut">
+              <figcaption>
+                <strong>Heiko Rauhut</strong>
+              </figcaption>
+            </figure>
+            <figure class="team-card">
+              <img src="./AntoniaVelicu_450.jpg-2.jpg" alt="Porträt von Antonia Velicu">
+              <figcaption>
+                <strong>Antonia Velicu</strong>
+              </figcaption>
+            </figure>
+            <figure class="team-card">
+              <img src="./FabianWinter-400.jpg.jpg" alt="Porträt von Fabian Winter">
+              <figcaption>
+                <strong>Fabian Winter</strong>
+              </figcaption>
+            </figure>
+          </div>
         </section>
       </main>
     </div>
 
     <noscript>Für diese Seite muss JavaScript aktiviert sein.</noscript>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
   </body>
   </html>

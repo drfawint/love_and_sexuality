@@ -6,14 +6,29 @@ if (!dashboardData || !dashboardData.records || !dashboardData.meta) {
 
 const { meta, records } = dashboardData;
 const outcomeMap = new Map(meta.outcomeVariables.map((item) => [item.key, item]));
-const palette = ["#df6d3b", "#2f7f7a", "#e0aa3e", "#728a62", "#9d5f80", "#65758b"];
+const palette = ["#0028A5", "#365DD5", "#1B214A", "#5972C5", "#666666", "#007E2A"];
+const identityOutcomeKeys = ["identity", "identityimportance", "identitythink"];
+const relationshipOutcomeKeys = ["currentlyinrel", "monoslidercur", "monosliderpast"];
+const bivariateVariables = [
+  { key: "gender", label: "Geschlecht", categories: meta.genderOptions },
+  { key: "ageGroup", label: "Altersgruppe", categories: meta.ageOptions },
+  { key: "educationBucket", label: "Bildungsgruppe", categories: meta.educationBucketOptions },
+  ...meta.outcomeVariables,
+];
+const bivariateMap = new Map(bivariateVariables.map((item) => [item.key, item]));
 
 const allEducationBuckets = [...meta.educationBucketOptions];
 const allGenderOptions = [...meta.genderOptions];
 
 const state = {
+  overallExperienceSort: "prevalence",
+  overallIdentityOutcome: identityOutcomeKeys[0],
+  overallRelationshipOutcome: relationshipOutcomeKeys[0],
   experienceSort: "gap",
-  selectedOutcome: meta.outcomeVariables[0].key,
+  selectedIdentityOutcome: identityOutcomeKeys[0],
+  selectedRelationshipOutcome: relationshipOutcomeKeys[0],
+  bivariateRow: "gender",
+  bivariateCol: "identity",
   groupA: {
     label: "Frauen",
     genders: ["Weiblich"],
@@ -29,16 +44,32 @@ const state = {
 };
 
 const ui = {
+  overallMetricsGrid: document.getElementById("overall-metrics-grid"),
+  overallIdentityOutcomeSelect: document.getElementById("overall-identity-outcome-select"),
+  overallIdentityStackedWrapper: document.getElementById("overall-identity-stacked-wrapper"),
+  overallIdentityCategoryTable: document.getElementById("overall-identity-category-table"),
+  overallRelationshipOutcomeSelect: document.getElementById("overall-relationship-outcome-select"),
+  overallRelationshipStackedWrapper: document.getElementById("overall-relationship-stacked-wrapper"),
+  overallRelationshipCategoryTable: document.getElementById("overall-relationship-category-table"),
+  overallExperienceSort: document.getElementById("overall-experience-sort"),
+  overallExperienceMeta: document.getElementById("overall-experience-meta"),
+  overallExperienceChart: document.getElementById("overall-experience-chart"),
   groupAControls: document.getElementById("group-a-controls"),
   groupBControls: document.getElementById("group-b-controls"),
   metricsGrid: document.getElementById("metrics-grid"),
-  insightCard: document.getElementById("insight-card"),
   experienceMeta: document.getElementById("experience-meta"),
   experienceChart: document.getElementById("experience-chart"),
-  outcomeSelect: document.getElementById("outcome-select"),
-  stackedWrapper: document.getElementById("stacked-wrapper"),
-  categoryTable: document.getElementById("category-table"),
+  identityOutcomeSelect: document.getElementById("identity-outcome-select"),
+  identityStackedWrapper: document.getElementById("identity-stacked-wrapper"),
+  identityCategoryTable: document.getElementById("identity-category-table"),
+  relationshipOutcomeSelect: document.getElementById("relationship-outcome-select"),
+  relationshipStackedWrapper: document.getElementById("relationship-stacked-wrapper"),
+  relationshipCategoryTable: document.getElementById("relationship-category-table"),
   experienceSort: document.getElementById("experience-sort"),
+  bivariateRowSelect: document.getElementById("bivariate-row-select"),
+  bivariateColSelect: document.getElementById("bivariate-col-select"),
+  bivariateMeta: document.getElementById("bivariate-meta"),
+  bivariateTable: document.getElementById("bivariate-table"),
   educationNote: document.getElementById("education-note"),
   heroSampleSize: document.getElementById("hero-sample-size"),
 };
@@ -62,11 +93,34 @@ function unique(values) {
 
 function escapeHtml(value) {
   return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function appendSelectOptions(selectElement, items) {
+  items.forEach((item) => {
+    const option = document.createElement("option");
+    option.value = item.key;
+    option.textContent = item.label;
+    selectElement.appendChild(option);
+  });
+}
+
+function appendChildren(parent, children) {
+  children.forEach((child) => parent.appendChild(child));
+}
+
+function experienceValues(record) {
+  if (Array.isArray(record.experiencewith)) {
+    return record.experiencewith.filter(Boolean);
+  }
+  if (typeof record.experiencewith === "string" && record.experiencewith) {
+    return [record.experiencewith];
+  }
+  return [];
 }
 
 function describeGroup(group) {
@@ -114,10 +168,10 @@ function valueShares(groupRecords, key, categories) {
 }
 
 function experienceShares(groupRecords) {
-  const valid = groupRecords.filter((record) => Array.isArray(record.experiencewith) && record.experiencewith.length > 0);
+  const valid = groupRecords.filter((record) => experienceValues(record).length > 0);
   const denominator = valid.length;
   const rows = meta.experienceItems.map((item) => {
-    const count = valid.filter((record) => record.experiencewith.includes(item)).length;
+    const count = valid.filter((record) => experienceValues(record).includes(item)).length;
     return {
       item,
       count,
@@ -127,31 +181,125 @@ function experienceShares(groupRecords) {
   return { denominator, rows };
 }
 
-function getLargestExperienceGap(groupARecords, groupBRecords) {
-  const expA = experienceShares(groupARecords);
-  const expB = experienceShares(groupBRecords);
-  const merged = expA.rows.map((row, index) => ({
-    item: row.item,
-    pctA: row.pct,
-    pctB: expB.rows[index].pct,
-    gap: row.pct - expB.rows[index].pct,
-  }));
-  merged.sort((left, right) => Math.abs(right.gap) - Math.abs(left.gap));
-  return merged[0];
+function renderOverallMetrics(allRecords) {
+  const validRelationship = allRecords.filter((record) => Boolean(record.currentlyinrel));
+  const inRelationship = validRelationship.filter((record) => ["Ja, eine", "Ja, mehrere"].includes(record.currentlyinrel));
+  const inRelationshipShare = validRelationship.length ? (inRelationship.length / validRelationship.length) * 100 : 0;
+
+  const cards = [
+    {
+      title: "Gesamtstichprobe",
+      value: `${meta.sampleSize}`,
+      sub: "Fälle ohne Filterung",
+    },
+    {
+      title: "Medianalter",
+      value: `${meta.medianAge}`,
+      sub: "Jahre",
+    },
+    {
+      title: "Aktuell in Beziehung",
+      value: formatPct(inRelationshipShare),
+      sub: `Ja, eine oder mehrere Beziehungen | gültige Angaben n = ${validRelationship.length}`,
+    },
+    {
+      title: "Erfasste Beziehungstypen",
+      value: `${meta.experienceItems.length}`,
+      sub: "Kategorien im Erfahrungsmodul",
+    },
+  ];
+
+  ui.overallMetricsGrid.innerHTML = cards
+    .map(
+      (card) => `
+        <article class="metric-card">
+          <div class="metric-title">${escapeHtml(card.title)}</div>
+          <div class="metric-value">${card.value}</div>
+          <div class="metric-sub">${escapeHtml(card.sub)}</div>
+        </article>
+      `
+    )
+    .join("");
 }
 
-function getLargestOutcomeGap(groupARecords, groupBRecords, key) {
-  const config = outcomeMap.get(key);
-  const distA = valueShares(groupARecords, key, config.categories);
-  const distB = valueShares(groupBRecords, key, config.categories);
-  const merged = config.categories.map((category, index) => ({
-    category,
-    pctA: distA.shares[index].pct,
-    pctB: distB.shares[index].pct,
-    gap: distA.shares[index].pct - distB.shares[index].pct,
-  }));
-  merged.sort((left, right) => Math.abs(right.gap) - Math.abs(left.gap));
-  return merged[0];
+function renderSingleOutcomeChart(groupRecords, selectedKey, stackedWrapper, categoryTable, label = "Gesamtstichprobe") {
+  const config = outcomeMap.get(selectedKey);
+  const distribution = valueShares(groupRecords, config.key, config.categories);
+
+  const segments = distribution.shares
+    .map((share, index) => {
+      const width = clamp(share.pct);
+      const text = width >= 11 ? `<span>${Math.round(width)}%</span>` : "";
+      return `<div class="stack-segment" style="width:${width}%; background:${palette[index % palette.length]}" title="${share.category}: ${formatPct(share.pct)}">${text}</div>`;
+    })
+    .join("");
+
+  stackedWrapper.innerHTML = `
+    <article class="stack-card single">
+      <h3>${escapeHtml(label)}</h3>
+      <div class="stack-bar">${segments}</div>
+      <div class="stack-meta">Gültige Angaben n = ${distribution.denominator}</div>
+    </article>
+  `;
+
+  const rows = config.categories
+    .map((category, index) => {
+      const share = distribution.shares[index];
+      return `
+        <div class="category-row single">
+          <div class="category-label">
+            <span class="swatch" style="background:${palette[index % palette.length]}"></span>
+            <span>${escapeHtml(category)}</span>
+          </div>
+          <div class="numeric">${share.count}</div>
+          <div class="numeric">${formatPct(share.pct)}</div>
+        </div>
+      `;
+    })
+    .join("");
+
+  categoryTable.innerHTML = `
+    <div class="category-header single">
+      <div>${escapeHtml(config.label)}</div>
+      <div class="numeric">n</div>
+      <div class="numeric">Anteil</div>
+    </div>
+    ${rows}
+  `;
+}
+
+function renderOverallExperienceChart(allRecords) {
+  const overall = experienceShares(allRecords);
+  const rows = [...overall.rows];
+
+  rows.sort((left, right) => {
+    if (state.overallExperienceSort === "alphabetical") {
+      return left.item.localeCompare(right.item, "de");
+    }
+    return right.pct - left.pct;
+  });
+
+  ui.overallExperienceMeta.innerHTML = `
+    <span class="chip">Gültige Angaben n = ${overall.denominator}</span>
+    <span class="chip">Anteil innerhalb der Fälle mit gültigen Erfahrungangaben</span>
+  `;
+
+  ui.overallExperienceChart.innerHTML = rows
+    .map(
+      (row) => `
+        <div class="experience-row overall">
+          <div class="experience-label">${escapeHtml(row.item)}</div>
+          <div class="bar-track" title="${formatPct(row.pct)}">
+            <div class="bar-fill overall" style="width:${clamp(row.pct)}%"></div>
+          </div>
+          <div class="experience-values">
+            <strong>${formatPct(row.pct)}</strong>
+            <span>n = ${row.count}</span>
+          </div>
+        </div>
+      `
+    )
+    .join("");
 }
 
 function buildCheckboxGroup(namePrefix, values, selectedValues, onChange) {
@@ -169,8 +317,8 @@ function buildCheckboxGroup(namePrefix, values, selectedValues, onChange) {
     input.addEventListener("change", () => onChange(value, input.checked, input));
     const text = document.createElement("span");
     text.textContent = value;
-    label.append(input, text);
-    wrapper.append(label);
+    appendChildren(label, [input, text]);
+    wrapper.appendChild(label);
   });
 
   return wrapper;
@@ -196,8 +344,8 @@ function buildAgeToggle(namePrefix, selectedValue, onChange) {
     input.addEventListener("change", () => onChange(option.value));
     const text = document.createElement("span");
     text.textContent = option.label;
-    label.append(input, text);
-    wrapper.append(label);
+    appendChildren(label, [input, text]);
+    wrapper.appendChild(label);
   });
 
   return wrapper;
@@ -221,13 +369,13 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
   textInput.type = "text";
   textInput.value = getGroupLabel(group, fallbackLabel);
   textInput.placeholder = fallbackLabel;
-  labelLabel.append(labelHint, textInput);
-  labelWrap.append(labelLabel);
+  appendChildren(labelLabel, [labelHint, textInput]);
+  labelWrap.appendChild(labelLabel);
   textInput.addEventListener("input", (event) => {
     state[stateKey].label = event.target.value;
     renderAll();
   });
-  form.append(labelWrap);
+  form.appendChild(labelWrap);
 
   const genderSection = document.createElement("div");
   genderSection.className = "group-section";
@@ -242,9 +390,9 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
     state[stateKey].genders = [...allGenderOptions];
     renderAll();
   });
-  genderHeader.append(genderAllBtn);
-  genderSection.append(genderHeader);
-  genderSection.append(
+  genderHeader.appendChild(genderAllBtn);
+  genderSection.appendChild(genderHeader);
+  genderSection.appendChild(
     buildCheckboxGroup(`${stateKey}-gender`, allGenderOptions, group.genders, (value, checked, input) => {
       const next = checked
         ? unique([...state[stateKey].genders, value])
@@ -257,18 +405,18 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
       renderAll();
     })
   );
-  form.append(genderSection);
+  form.appendChild(genderSection);
 
   const ageSection = document.createElement("div");
   ageSection.className = "group-section";
   ageSection.innerHTML = `<span class="control-help">Alter</span>`;
-  ageSection.append(
+  ageSection.appendChild(
     buildAgeToggle(stateKey, group.ageGroup, (value) => {
       state[stateKey].ageGroup = value;
       renderAll();
     })
   );
-  form.append(ageSection);
+  form.appendChild(ageSection);
 
   const educationSection = document.createElement("div");
   educationSection.className = "group-section";
@@ -283,9 +431,9 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
     state[stateKey].educationBuckets = [...allEducationBuckets];
     renderAll();
   });
-  educationHeader.append(educationAllBtn);
-  educationSection.append(educationHeader);
-  educationSection.append(
+  educationHeader.appendChild(educationAllBtn);
+  educationSection.appendChild(educationHeader);
+  educationSection.appendChild(
     buildCheckboxGroup(`${stateKey}-education`, allEducationBuckets, group.educationBuckets, (value, checked, input) => {
       const next = checked
         ? unique([...state[stateKey].educationBuckets, value])
@@ -298,7 +446,7 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
       renderAll();
     })
   );
-  form.append(educationSection);
+  form.appendChild(educationSection);
 
   const summary = document.createElement("div");
   summary.className = "group-section";
@@ -309,19 +457,17 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
     const pill = document.createElement("span");
     pill.className = "summary-pill";
     pill.textContent = part;
-    summaryStack.append(pill);
+    summaryStack.appendChild(pill);
   });
-  summary.append(summaryStack);
-  form.append(summary);
+  summary.appendChild(summaryStack);
+  form.appendChild(summary);
 
-  target.append(form);
+  target.appendChild(form);
 }
 
 function renderMetrics(groupARecords, groupBRecords) {
   const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
   const groupBLabel = getGroupLabel(state.groupB, "Gruppe B");
-  const topGap = getLargestExperienceGap(groupARecords, groupBRecords);
-  const topOutcome = getLargestOutcomeGap(groupARecords, groupBRecords, state.selectedOutcome);
 
   const cards = [
     {
@@ -333,16 +479,6 @@ function renderMetrics(groupARecords, groupBRecords) {
       title: groupBLabel,
       value: `${groupBRecords.length}`,
       sub: describeGroup(state.groupB).join(" · "),
-    },
-    {
-      title: "Größte Differenz bei Erfahrungen",
-      value: formatPp(topGap ? topGap.gap : 0),
-      sub: topGap ? topGap.item : "Keine ausreichenden Daten",
-    },
-    {
-      title: "Größte Differenz in der gewählten Variable",
-      value: formatPp(topOutcome ? topOutcome.gap : 0),
-      sub: topOutcome ? topOutcome.category : "Keine ausreichenden Daten",
     },
   ];
 
@@ -357,40 +493,6 @@ function renderMetrics(groupARecords, groupBRecords) {
       `
     )
     .join("");
-}
-
-function renderInsights(groupARecords, groupBRecords) {
-  const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
-  const groupBLabel = getGroupLabel(state.groupB, "Gruppe B");
-  const topGap = getLargestExperienceGap(groupARecords, groupBRecords);
-  const topOutcome = getLargestOutcomeGap(groupARecords, groupBRecords, state.selectedOutcome);
-  const outcomeConfig = outcomeMap.get(state.selectedOutcome);
-
-  ui.insightCard.innerHTML = `
-    <div class="section-head compact">
-      <div>
-        <p class="section-kicker">Sofort lesbar</p>
-        <h2>Automatische Lesart der aktuellen Gegenüberstellung</h2>
-      </div>
-    </div>
-    <div class="insight-grid">
-      <div class="insight-box">
-        <span class="section-kicker">Stärkste Erfahrungsdifferenz</span>
-        <strong>${escapeHtml(topGap ? topGap.item : "Keine ausreichenden Daten")}</strong>
-        <p>${escapeHtml(topGap ? `${groupALabel} liegt ${formatPp(topGap.gap)} vor ${groupBLabel}.` : "Für diese Filterung liegen zu wenige gültige Angaben vor.")}</p>
-      </div>
-      <div class="insight-box">
-        <span class="section-kicker">Stärkste Differenz in ${escapeHtml(outcomeConfig.label)}</span>
-        <strong>${escapeHtml(topOutcome ? topOutcome.category : "Keine ausreichenden Daten")}</strong>
-        <p>${escapeHtml(topOutcome ? `${groupALabel} liegt ${formatPp(topOutcome.gap)} vor ${groupBLabel}.` : "Für diese Variable liegen zu wenige gültige Angaben vor.")}</p>
-      </div>
-      <div class="insight-box">
-        <span class="section-kicker">Subgruppenlogik</span>
-        <strong>Medianalter, Geschlecht, Bildung</strong>
-        <p>Die Gruppen können frei kombiniert werden, etwa Frauen vs. Männer, junge Frauen vs. junge Männer oder akademisch/studiennah vs. ohne Uni-Abschluss.</p>
-      </div>
-    </div>
-  `;
 }
 
 function renderExperienceChart(groupARecords, groupBRecords) {
@@ -440,8 +542,8 @@ function renderExperienceChart(groupARecords, groupBRecords) {
     .join("");
 }
 
-function renderOutcomeChart(groupARecords, groupBRecords) {
-  const config = outcomeMap.get(state.selectedOutcome);
+function renderOutcomeChart(groupARecords, groupBRecords, selectedKey, stackedWrapper, categoryTable) {
+  const config = outcomeMap.get(selectedKey);
   const distA = valueShares(groupARecords, config.key, config.categories);
   const distB = valueShares(groupBRecords, config.key, config.categories);
   const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
@@ -452,7 +554,7 @@ function renderOutcomeChart(groupARecords, groupBRecords) {
     { label: groupBLabel, distribution: distB },
   ];
 
-  ui.stackedWrapper.innerHTML = bars
+  stackedWrapper.innerHTML = bars
     .map(({ label, distribution }) => {
       const segments = distribution.shares
         .map((share, index) => {
@@ -490,7 +592,7 @@ function renderOutcomeChart(groupARecords, groupBRecords) {
     `;
   });
 
-  ui.categoryTable.innerHTML = `
+  categoryTable.innerHTML = `
     <div class="category-header">
       <div>${escapeHtml(config.label)}</div>
       <div class="numeric">${escapeHtml(groupALabel)}</div>
@@ -501,72 +603,129 @@ function renderOutcomeChart(groupARecords, groupBRecords) {
   `;
 }
 
-function applyPreset(presetKey) {
-  switch (presetKey) {
-    case "women-men":
-      state.groupA = {
-        label: "Frauen",
-        genders: ["Weiblich"],
-        ageGroup: "all",
-        educationBuckets: [...allEducationBuckets],
-      };
-      state.groupB = {
-        label: "Männer",
-        genders: ["Männlich"],
-        ageGroup: "all",
-        educationBuckets: [...allEducationBuckets],
-      };
-      break;
-    case "young-women-young-men":
-      state.groupA = {
-        label: "Junge Frauen",
-        genders: ["Weiblich"],
-        ageGroup: meta.ageOptions[0],
-        educationBuckets: [...allEducationBuckets],
-      };
-      state.groupB = {
-        label: "Junge Männer",
-        genders: ["Männlich"],
-        ageGroup: meta.ageOptions[0],
-        educationBuckets: [...allEducationBuckets],
-      };
-      break;
-    case "young-old":
-      state.groupA = {
-        label: "Jünger / gleich Median",
-        genders: [...allGenderOptions],
-        ageGroup: meta.ageOptions[0],
-        educationBuckets: [...allEducationBuckets],
-      };
-      state.groupB = {
-        label: "Älter als Median",
-        genders: [...allGenderOptions],
-        ageGroup: meta.ageOptions[1],
-        educationBuckets: [...allEducationBuckets],
-      };
-      break;
-    case "academic-nonacademic":
-      state.groupA = {
-        label: "Uni / studiennah",
-        genders: [...allGenderOptions],
-        ageGroup: "all",
-        educationBuckets: ["Uni-Abschluss / Promotion", "Studiennah / Hochschulzugang"],
-      };
-      state.groupB = {
-        label: "Ohne Uni-Abschluss",
-        genders: [...allGenderOptions],
-        ageGroup: "all",
-        educationBuckets: ["Ohne Uni-Abschluss"],
-      };
-      break;
-    default:
-      break;
+function renderBivariateTable(allRecords) {
+  const rowConfig = bivariateMap.get(state.bivariateRow);
+  const colConfig = bivariateMap.get(state.bivariateCol);
+  const validRecords = allRecords.filter((record) => Boolean(record[rowConfig.key]) && Boolean(record[colConfig.key]));
+
+  ui.bivariateMeta.innerHTML = `
+    <span class="chip">Gültige Fälle für beide Variablen: n = ${validRecords.length}</span>
+    <span class="chip">Zellen zeigen Häufigkeiten und Zeilenprozente</span>
+  `;
+
+  if (!validRecords.length) {
+    ui.bivariateTable.innerHTML = `<p class="block-copy">Keine gemeinsamen gültigen Angaben für diese Variablenkombination.</p>`;
+    return;
   }
 
-  renderAll();
+  const rowTotals = rowConfig.categories.map(
+    (rowCategory) => validRecords.filter((record) => record[rowConfig.key] === rowCategory).length
+  );
+  const colTotals = colConfig.categories.map(
+    (colCategory) => validRecords.filter((record) => record[colConfig.key] === colCategory).length
+  );
+
+  const bodyRows = rowConfig.categories
+    .map((rowCategory, rowIndex) => {
+      const rowSubset = validRecords.filter((record) => record[rowConfig.key] === rowCategory);
+      const rowTotal = rowTotals[rowIndex];
+      const cells = colConfig.categories
+        .map((colCategory) => {
+          const count = rowSubset.filter((record) => record[colConfig.key] === colCategory).length;
+          const pct = rowTotal ? (count / rowTotal) * 100 : 0;
+          const alpha = Math.min(0.88, 0.06 + (pct / 100) * 0.72);
+          const textColor = pct >= 52 ? "#ffffff" : "#121212";
+          return `
+            <td class="bivariate-cell" style="background: rgba(0, 40, 165, ${alpha}); color: ${textColor};">
+              <strong>${count}</strong>
+              <span>${formatPct(pct)}</span>
+            </td>
+          `;
+        })
+        .join("");
+
+      return `
+        <tr>
+          <th scope="row">
+            <span class="bivariate-header-label">${escapeHtml(rowCategory)}</span>
+            <span class="bivariate-header-sub">n = ${rowTotal}</span>
+          </th>
+          ${cells}
+          <td>
+            <strong class="bivariate-total">${rowTotal}</strong>
+            <span class="bivariate-total-sub">100,0 %</span>
+          </td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  const footerTotals = colTotals
+    .map((count) => {
+      const pct = validRecords.length ? (count / validRecords.length) * 100 : 0;
+      return `
+        <td>
+          <strong class="bivariate-total">${count}</strong>
+          <span class="bivariate-total-sub">${formatPct(pct)}</span>
+        </td>
+      `;
+    })
+    .join("");
+
+  const headerColumns = colConfig.categories
+    .map((category, index) => {
+      const pct = validRecords.length ? (colTotals[index] / validRecords.length) * 100 : 0;
+      return `
+        <th scope="col">
+          <span class="bivariate-header-label">${escapeHtml(category)}</span>
+          <span class="bivariate-header-sub">n = ${colTotals[index]} | ${formatPct(pct)}</span>
+        </th>
+      `;
+    })
+    .join("");
+
+  ui.bivariateTable.innerHTML = `
+    <table class="bivariate-table">
+      <thead>
+        <tr>
+          <th scope="col">${escapeHtml(rowConfig.label)} \ ${escapeHtml(colConfig.label)}</th>
+          ${headerColumns}
+          <th scope="col">Zeilensumme</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${bodyRows}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Spaltensumme</th>
+          ${footerTotals}
+          <td>
+            <strong class="bivariate-total">${validRecords.length}</strong>
+            <span class="bivariate-total-sub">100,0 %</span>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  `;
 }
 
 function renderAll() {
+  renderOverallMetrics(records);
+  renderSingleOutcomeChart(
+    records,
+    state.overallIdentityOutcome,
+    ui.overallIdentityStackedWrapper,
+    ui.overallIdentityCategoryTable
+  );
+  renderSingleOutcomeChart(
+    records,
+    state.overallRelationshipOutcome,
+    ui.overallRelationshipStackedWrapper,
+    ui.overallRelationshipCategoryTable
+  );
+  renderOverallExperienceChart(records);
+
   renderGroupControls(ui.groupAControls, "groupA", "Gruppe A");
   renderGroupControls(ui.groupBControls, "groupB", "Gruppe B");
 
@@ -574,35 +733,88 @@ function renderAll() {
   const groupBRecords = filterRecords(state.groupB);
 
   renderMetrics(groupARecords, groupBRecords);
-  renderInsights(groupARecords, groupBRecords);
   renderExperienceChart(groupARecords, groupBRecords);
-  renderOutcomeChart(groupARecords, groupBRecords);
+  renderOutcomeChart(
+    groupARecords,
+    groupBRecords,
+    state.selectedIdentityOutcome,
+    ui.identityStackedWrapper,
+    ui.identityCategoryTable
+  );
+  renderOutcomeChart(
+    groupARecords,
+    groupBRecords,
+    state.selectedRelationshipOutcome,
+    ui.relationshipStackedWrapper,
+    ui.relationshipCategoryTable
+  );
+  renderBivariateTable(records);
 }
 
 function init() {
   ui.educationNote.textContent = meta.educationNote;
   ui.heroSampleSize.textContent = `${meta.sampleSize} Fälle`;
 
-  meta.outcomeVariables.forEach((item) => {
-    const option = document.createElement("option");
-    option.value = item.key;
-    option.textContent = item.label;
-    ui.outcomeSelect.append(option);
+  appendSelectOptions(
+    ui.overallIdentityOutcomeSelect,
+    identityOutcomeKeys.map((key) => outcomeMap.get(key))
+  );
+  appendSelectOptions(
+    ui.overallRelationshipOutcomeSelect,
+    relationshipOutcomeKeys.map((key) => outcomeMap.get(key))
+  );
+  appendSelectOptions(ui.identityOutcomeSelect, identityOutcomeKeys.map((key) => outcomeMap.get(key)));
+  appendSelectOptions(
+    ui.relationshipOutcomeSelect,
+    relationshipOutcomeKeys.map((key) => outcomeMap.get(key))
+  );
+  appendSelectOptions(ui.bivariateRowSelect, bivariateVariables);
+  appendSelectOptions(ui.bivariateColSelect, bivariateVariables);
+
+  ui.overallIdentityOutcomeSelect.value = state.overallIdentityOutcome;
+  ui.overallIdentityOutcomeSelect.addEventListener("change", (event) => {
+    state.overallIdentityOutcome = event.target.value;
+    renderAll();
   });
 
-  ui.outcomeSelect.value = state.selectedOutcome;
-  ui.outcomeSelect.addEventListener("change", (event) => {
-    state.selectedOutcome = event.target.value;
+  ui.overallRelationshipOutcomeSelect.value = state.overallRelationshipOutcome;
+  ui.overallRelationshipOutcomeSelect.addEventListener("change", (event) => {
+    state.overallRelationshipOutcome = event.target.value;
+    renderAll();
+  });
+
+  ui.identityOutcomeSelect.value = state.selectedIdentityOutcome;
+  ui.identityOutcomeSelect.addEventListener("change", (event) => {
+    state.selectedIdentityOutcome = event.target.value;
+    renderAll();
+  });
+
+  ui.relationshipOutcomeSelect.value = state.selectedRelationshipOutcome;
+  ui.relationshipOutcomeSelect.addEventListener("change", (event) => {
+    state.selectedRelationshipOutcome = event.target.value;
+    renderAll();
+  });
+
+  ui.bivariateRowSelect.value = state.bivariateRow;
+  ui.bivariateRowSelect.addEventListener("change", (event) => {
+    state.bivariateRow = event.target.value;
+    renderAll();
+  });
+
+  ui.bivariateColSelect.value = state.bivariateCol;
+  ui.bivariateColSelect.addEventListener("change", (event) => {
+    state.bivariateCol = event.target.value;
+    renderAll();
+  });
+
+  ui.overallExperienceSort.addEventListener("change", (event) => {
+    state.overallExperienceSort = event.target.value;
     renderAll();
   });
 
   ui.experienceSort.addEventListener("change", (event) => {
     state.experienceSort = event.target.value;
     renderAll();
-  });
-
-  document.querySelectorAll(".preset-btn").forEach((button) => {
-    button.addEventListener("click", () => applyPreset(button.dataset.preset));
   });
 
   renderAll();
