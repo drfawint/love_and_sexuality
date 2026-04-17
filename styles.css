@@ -233,6 +233,13 @@ a {
   opacity: 0.85;
 }
 
+.brand-lockup-logo {
+  display: block;
+  width: min(280px, 56vw);
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .brand-lockup-title {
   font-size: 1.75rem;
   font-size: clamp(1.5rem, 2vw, 1.75rem);
