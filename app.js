@@ -213,9 +213,9 @@ function renderOverallMetrics(allRecords) {
 
   const cards = [
     {
-      title: "Gesamtstichprobe",
+      title: "Vollständige Interviews",
       value: `${meta.sampleSize}`,
-      sub: "Fälle ohne Filterung",
+      sub: "Abgeschickte und vollständig abgeschlossene Fälle",
     },
     {
       title: "Medianalter",
@@ -783,7 +783,7 @@ function renderAll() {
 }
 
 function init() {
-  ui.heroSampleSize.textContent = `${meta.sampleSize} Fälle`;
+  ui.heroSampleSize.textContent = `${meta.sampleSize} vollständige Fälle`;
 
   appendSelectOptions(
     ui.overallIdentityOutcomeSelect,

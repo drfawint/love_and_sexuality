@@ -4,13 +4,13 @@ window.BILENDI_DASHBOARD_DATA =
     "title": "Normenwandel in Liebe und Sexualität",
     "subtitle": "Dynamische Bilendi-Auswertung für Gutachterinnen und Gutachter des Forschungsantrags",
     "authors": ["Dr. Fabian Winter", "Dr. Antonia Velicu"],
-    "sampleSize": 425,
+    "sampleSize": 322,
     "medianAge": 49,
     "genderOptions": ["Weiblich", "Männlich", "Divers", "Keine Angabe"],
     "ageOptions": ["Jünger / gleich Median (<= 49)", "Älter als Median (> 49)"],
     "educationBucketOptions": ["Uni-Abschluss / Promotion", "Studiennah / Hochschulzugang", "Ohne Uni-Abschluss", "Keine Angabe"],
     "educationNote": "Ein direkter Studierendenstatus liegt im Kerndatensatz nicht separat vor. Die Kategorie 'Studiennah / Hochschulzugang' dient daher als transparenter Proxy für studiennahe Fälle.",
-    "experienceItems": ["Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)", "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)", "Single mit einem*r unverbindlichen Liebhaber*in (Situationship / Friendship plus)", "Monogame Beziehung mit Seitensprüngen (sexuelle Kontakte außerhalb der Beziehung ohne Absprachen)", "Single mit mehreren unverbindlichen Liebhaber*innen gleichzeitig (Situationships/ Friendship plus)", "Swingen (gemeinsame sexuelle Aktivitäten als Paar ohne emotionale Beziehungen zu den weiteren beteiligten Personen)", "Offene Beziehung (individuelle sexuelle Kontakte ausserhalb der Beziehung)", "Don’t ask, don’t tell (sexuelle Kontakte ausserhalb der Beziehung mit stillschweigender Duldung)", "Beziehungsanarchie (Beziehungen ohne feste Kategorien und Hierarchien)", "Triade oder ähnliche (Beziehung zwischen 3 oder mehr Personen, aber mit niemandem außerhalb dieser Beziehung)", "Polyamorie (einvernehmlich vereinbarte, transparente, auf Dauer ausgelegte sexuelle und emotionale Beziehungen mit mehreren Menschen)", "Solo-Polyamorie (mehrere Beziehungen mit gleichzeitiger Beibehaltung eines unabhängigen Lebensstiles)"],
+    "experienceItems": ["Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)", "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)", "Single mit einem*r unverbindlichen Liebhaber*in (Situationship / Friendship plus)", "Monogame Beziehung mit Seitensprüngen (sexuelle Kontakte außerhalb der Beziehung ohne Absprachen)", "Single mit mehreren unverbindlichen Liebhaber*innen gleichzeitig (Situationships/ Friendship plus)", "Swingen (gemeinsame sexuelle Aktivitäten als Paar ohne emotionale Beziehungen zu den weiteren beteiligten Personen)", "Don’t ask, don’t tell (sexuelle Kontakte ausserhalb der Beziehung mit stillschweigender Duldung)", "Offene Beziehung (individuelle sexuelle Kontakte ausserhalb der Beziehung)", "Beziehungsanarchie (Beziehungen ohne feste Kategorien und Hierarchien)", "Triade oder ähnliche (Beziehung zwischen 3 oder mehr Personen, aber mit niemandem außerhalb dieser Beziehung)", "Polyamorie (einvernehmlich vereinbarte, transparente, auf Dauer ausgelegte sexuelle und emotionale Beziehungen mit mehreren Menschen)", "Solo-Polyamorie (mehrere Beziehungen mit gleichzeitiger Beibehaltung eines unabhängigen Lebensstiles)"],
     "outcomeVariables": [
       {
         "key": "identity",
@@ -218,21 +218,6 @@ window.BILENDI_DASHBOARD_DATA =
     },
     {
       "id": 12,
-      "identity": "Vollständig monogam",
-      "identityimportance": "Sehr wichtig",
-      "identitythink": "Trifft überhaupt nicht zu",
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": "Vollständig monogam",
-      "monosliderpast": null,
-      "experiencewith": ["Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)", "Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)"],
-      "gender": "Weiblich",
-      "age": 53,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Allgemeine oder berufliche Hochschulreife / Matura / Abitur /",
-      "educationBucket": "Studiennah / Hochschulzugang"
-    },
-    {
-      "id": 13,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -247,7 +232,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 14,
+      "id": 13,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -262,7 +247,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 15,
+      "id": 14,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -277,7 +262,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 16,
+      "id": 15,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -292,7 +277,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 17,
+      "id": 16,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -307,7 +292,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 18,
+      "id": 17,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -322,7 +307,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 19,
+      "id": 18,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -337,7 +322,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 20,
+      "id": 19,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": null,
@@ -352,7 +337,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 21,
+      "id": 20,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -367,7 +352,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 22,
+      "id": 21,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -382,7 +367,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 23,
+      "id": 22,
       "identity": null,
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -397,7 +382,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 24,
+      "id": 23,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -412,7 +397,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 25,
+      "id": 24,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -427,7 +412,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 26,
+      "id": 25,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -442,7 +427,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 27,
+      "id": 26,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -457,7 +442,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 28,
+      "id": 27,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -472,7 +457,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 29,
+      "id": 28,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -487,7 +472,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 30,
+      "id": 29,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -502,7 +487,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 31,
+      "id": 30,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -517,7 +502,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 32,
+      "id": 31,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -532,7 +517,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 33,
+      "id": 32,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -547,7 +532,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 34,
+      "id": 33,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -562,7 +547,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Keine Angabe"
     },
     {
-      "id": 35,
+      "id": 34,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -577,7 +562,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 36,
+      "id": 35,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -592,7 +577,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 37,
+      "id": 36,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -607,7 +592,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 38,
+      "id": 37,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -622,7 +607,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 39,
+      "id": 38,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -637,7 +622,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 40,
+      "id": 39,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -652,7 +637,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 41,
+      "id": 40,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -667,7 +652,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 42,
+      "id": 41,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -682,7 +667,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 43,
+      "id": 42,
       "identity": null,
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -697,7 +682,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 44,
+      "id": 43,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -712,7 +697,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 45,
+      "id": 44,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -727,7 +712,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 46,
+      "id": 45,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -742,7 +727,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 47,
+      "id": 46,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -757,22 +742,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 48,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 49,
+      "id": 47,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -787,7 +757,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 50,
+      "id": 48,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -802,7 +772,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 51,
+      "id": 49,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -817,7 +787,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 52,
+      "id": 50,
       "identity": "Eher nicht-monogam",
       "identityimportance": null,
       "identitythink": null,
@@ -832,7 +802,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 53,
+      "id": 51,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -847,7 +817,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 54,
+      "id": 52,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -862,7 +832,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 55,
+      "id": 53,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -877,7 +847,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 56,
+      "id": 54,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -892,7 +862,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 57,
+      "id": 55,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -907,7 +877,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 58,
+      "id": 56,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -922,7 +892,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 59,
+      "id": 57,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -937,7 +907,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 60,
+      "id": 58,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -952,7 +922,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 61,
+      "id": 59,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -967,22 +937,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 62,
-      "identity": "Vollständig monogam",
-      "identityimportance": "Sehr wichtig",
-      "identitythink": "Trifft überhaupt nicht zu",
-      "currentlyinrel": "Nein, aber ich hatte schon mal eine Beziehung",
-      "monoslidercur": null,
-      "monosliderpast": "Vollständig monogam",
-      "experiencewith": "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)",
-      "gender": "Männlich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": "Fachschulen/Meister/Techniker*in / BHS / Fachmatura",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 63,
+      "id": 60,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -997,7 +952,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 64,
+      "id": 61,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1012,7 +967,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 65,
+      "id": 62,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1027,7 +982,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 66,
+      "id": 63,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1042,7 +997,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 67,
+      "id": 64,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1057,7 +1012,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 68,
+      "id": 65,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1072,7 +1027,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 69,
+      "id": 66,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1087,7 +1042,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 70,
+      "id": 67,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1102,7 +1057,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 71,
+      "id": 68,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1117,7 +1072,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 72,
+      "id": 69,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1132,7 +1087,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 73,
+      "id": 70,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1147,7 +1102,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 74,
+      "id": 71,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1162,37 +1117,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 75,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 24,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": "Allgemeine oder berufliche Hochschulreife / Matura / Abitur /",
-      "educationBucket": "Studiennah / Hochschulzugang"
-    },
-    {
-      "id": 76,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 77,
+      "id": 72,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1207,7 +1132,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 78,
+      "id": 73,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -1222,7 +1147,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 79,
+      "id": 74,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1237,7 +1162,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 80,
+      "id": 75,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -1252,7 +1177,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 81,
+      "id": 76,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1267,7 +1192,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 82,
+      "id": 77,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1282,7 +1207,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 83,
+      "id": 78,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1297,7 +1222,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 84,
+      "id": 79,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1312,7 +1237,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 85,
+      "id": 80,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1327,7 +1252,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 86,
+      "id": 81,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -1342,7 +1267,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 87,
+      "id": 82,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1357,7 +1282,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 88,
+      "id": 83,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -1372,7 +1297,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 89,
+      "id": 84,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1387,7 +1312,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 90,
+      "id": 85,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1402,7 +1327,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 91,
+      "id": 86,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1417,7 +1342,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 92,
+      "id": 87,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1432,7 +1357,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 93,
+      "id": 88,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1447,7 +1372,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 94,
+      "id": 89,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1462,7 +1387,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 95,
+      "id": 90,
       "identity": null,
       "identityimportance": null,
       "identitythink": "Trifft eher nicht zu",
@@ -1477,7 +1402,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 96,
+      "id": 91,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -1492,22 +1417,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 97,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 61,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 98,
+      "id": 92,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -1522,7 +1432,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 99,
+      "id": 93,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1537,7 +1447,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 100,
+      "id": 94,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1552,7 +1462,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 101,
+      "id": 95,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1567,22 +1477,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 102,
-      "identity": "Vollständig monogam",
-      "identityimportance": "Gar nicht wichtig",
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)",
-      "gender": "Weiblich",
-      "age": 79,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Mittlere Schulbildung / Hauptschule / Sekundarstufe I",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 103,
+      "id": 96,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -1597,7 +1492,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 104,
+      "id": 97,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1612,7 +1507,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 105,
+      "id": 98,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1627,7 +1522,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 106,
+      "id": 99,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1642,7 +1537,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 107,
+      "id": 100,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": null,
@@ -1657,7 +1552,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 108,
+      "id": 101,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -1672,22 +1567,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 109,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 63,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 110,
+      "id": 102,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1702,7 +1582,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 111,
+      "id": 103,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -1717,7 +1597,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 112,
+      "id": 104,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1732,7 +1612,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 113,
+      "id": 105,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1747,7 +1627,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 114,
+      "id": 106,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -1762,7 +1642,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 115,
+      "id": 107,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -1777,7 +1657,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 116,
+      "id": 108,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1792,22 +1672,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 117,
-      "identity": "Vollständig nicht-monogam",
-      "identityimportance": "Eher nicht wichtig",
-      "identitythink": "Trifft überhaupt nicht zu",
-      "currentlyinrel": "Ja, mehrere",
-      "monoslidercur": "Vollständig nicht-monogam",
-      "monosliderpast": null,
-      "experiencewith": ["Single mit mehreren unverbindlichen Liebhaber*innen gleichzeitig (Situationships/ Friendship plus)", "Monogame Beziehung mit Seitensprüngen (sexuelle Kontakte außerhalb der Beziehung ohne Absprachen)", "Offene Beziehung (individuelle sexuelle Kontakte ausserhalb der Beziehung)"],
-      "gender": "Weiblich",
-      "age": 75,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Berufliche Ausbildung (Lehre, EFZ, duale Ausbildung)",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 118,
+      "id": 109,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -1822,7 +1687,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 119,
+      "id": 110,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -1837,52 +1702,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 120,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 121,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 122,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 123,
+      "id": 111,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1897,7 +1717,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 124,
+      "id": 112,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -1912,7 +1732,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 125,
+      "id": 113,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -1927,7 +1747,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 126,
+      "id": 114,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1942,7 +1762,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 127,
+      "id": 115,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -1957,7 +1777,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 128,
+      "id": 116,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -1972,7 +1792,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 129,
+      "id": 117,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Teils/teils",
@@ -1987,7 +1807,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 130,
+      "id": 118,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2002,7 +1822,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 131,
+      "id": 119,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Teils/teils",
@@ -2017,7 +1837,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 132,
+      "id": 120,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2032,7 +1852,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 133,
+      "id": 121,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2047,7 +1867,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 134,
+      "id": 122,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher zu",
@@ -2062,7 +1882,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 135,
+      "id": 123,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -2077,7 +1897,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 136,
+      "id": 124,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -2092,7 +1912,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 137,
+      "id": 125,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -2107,7 +1927,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 138,
+      "id": 126,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2122,7 +1942,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 139,
+      "id": 127,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2137,7 +1957,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 140,
+      "id": 128,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2152,7 +1972,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 141,
+      "id": 129,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -2167,7 +1987,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 142,
+      "id": 130,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -2182,7 +2002,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 143,
+      "id": 131,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": null,
@@ -2197,7 +2017,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 144,
+      "id": 132,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2212,7 +2032,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 145,
+      "id": 133,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2227,7 +2047,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 146,
+      "id": 134,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2242,7 +2062,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 147,
+      "id": 135,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2257,7 +2077,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 148,
+      "id": 136,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2272,7 +2092,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 149,
+      "id": 137,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -2287,7 +2107,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 150,
+      "id": 138,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2302,7 +2122,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 151,
+      "id": 139,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2317,7 +2137,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 152,
+      "id": 140,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2332,22 +2152,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 153,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 63,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Berufliche Ausbildung (Lehre, EFZ, duale Ausbildung)",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 154,
+      "id": 141,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2362,7 +2167,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 155,
+      "id": 142,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -2377,7 +2182,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 156,
+      "id": 143,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2392,7 +2197,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 157,
+      "id": 144,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2407,7 +2212,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 158,
+      "id": 145,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2422,7 +2227,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 159,
+      "id": 146,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2437,7 +2242,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 160,
+      "id": 147,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2452,7 +2257,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 161,
+      "id": 148,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher zu",
@@ -2467,7 +2272,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 162,
+      "id": 149,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -2482,7 +2287,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 163,
+      "id": 150,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -2497,7 +2302,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 164,
+      "id": 151,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -2512,7 +2317,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 165,
+      "id": 152,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -2527,22 +2332,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 166,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 167,
+      "id": 153,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2557,7 +2347,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 168,
+      "id": 154,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2572,7 +2362,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 169,
+      "id": 155,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -2587,7 +2377,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 170,
+      "id": 156,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2602,7 +2392,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 171,
+      "id": 157,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2617,7 +2407,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 172,
+      "id": 158,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -2632,7 +2422,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 173,
+      "id": 159,
       "identity": "Eher nicht-monogam",
       "identityimportance": null,
       "identitythink": null,
@@ -2647,7 +2437,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 174,
+      "id": 160,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -2662,7 +2452,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 175,
+      "id": 161,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2677,7 +2467,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 176,
+      "id": 162,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2692,7 +2482,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 177,
+      "id": 163,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2707,7 +2497,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 178,
+      "id": 164,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2722,7 +2512,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 179,
+      "id": 165,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -2737,7 +2527,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 180,
+      "id": 166,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2752,7 +2542,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 181,
+      "id": 167,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2767,7 +2557,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 182,
+      "id": 168,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2782,7 +2572,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 183,
+      "id": 169,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -2797,7 +2587,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 184,
+      "id": 170,
       "identity": "Vollständig monogam",
       "identityimportance": null,
       "identitythink": "Trifft eher nicht zu",
@@ -2812,7 +2602,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Keine Angabe"
     },
     {
-      "id": 185,
+      "id": 171,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -2827,7 +2617,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 186,
+      "id": 172,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -2842,7 +2632,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 187,
+      "id": 173,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -2857,7 +2647,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 188,
+      "id": 174,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2872,7 +2662,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 189,
+      "id": 175,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -2887,37 +2677,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 190,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": "Trifft überhaupt nicht zu",
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)",
-      "gender": "Männlich",
-      "age": 74,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Berufliche Ausbildung (Lehre, EFZ, duale Ausbildung)",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 191,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 192,
+      "id": 176,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2932,7 +2692,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 193,
+      "id": 177,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -2947,22 +2707,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 194,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 61,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Allgemeine oder berufliche Hochschulreife / Matura / Abitur /",
-      "educationBucket": "Studiennah / Hochschulzugang"
-    },
-    {
-      "id": 195,
+      "id": 178,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -2977,7 +2722,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 196,
+      "id": 179,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -2992,22 +2737,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 197,
-      "identity": "Eher nicht-monogam",
-      "identityimportance": "Eher wichtig",
-      "identitythink": "Trifft eher zu",
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": "Vollständig monogam",
-      "monosliderpast": null,
-      "experiencewith": "Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)",
-      "gender": "Männlich",
-      "age": 60,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Berufsfachschule/ Fachmittelschule / BMS",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 198,
+      "id": 180,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3022,7 +2752,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 199,
+      "id": 181,
       "identity": null,
       "identityimportance": null,
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3037,7 +2767,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 200,
+      "id": 182,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3052,7 +2782,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 201,
+      "id": 183,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -3067,7 +2797,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 202,
+      "id": 184,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -3082,7 +2812,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 203,
+      "id": 185,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3097,7 +2827,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 204,
+      "id": 186,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -3112,7 +2842,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 205,
+      "id": 187,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -3127,7 +2857,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 206,
+      "id": 188,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3142,7 +2872,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 207,
+      "id": 189,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft voll zu",
@@ -3157,7 +2887,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 208,
+      "id": 190,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3172,7 +2902,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 209,
+      "id": 191,
       "identity": null,
       "identityimportance": null,
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3187,52 +2917,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 210,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 211,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 212,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 213,
+      "id": 192,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3247,7 +2932,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 214,
+      "id": 193,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -3262,7 +2947,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 215,
+      "id": 194,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft voll zu",
@@ -3277,7 +2962,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 216,
+      "id": 195,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -3292,7 +2977,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 217,
+      "id": 196,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3307,7 +2992,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 218,
+      "id": 197,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3322,7 +3007,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 219,
+      "id": 198,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -3337,22 +3022,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 220,
-      "identity": "Phasenweise monogam, phasenweise nicht-monogam",
-      "identityimportance": "Eher nicht wichtig",
-      "identitythink": "Trifft eher nicht zu",
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": "Phasenweise monogam, phasenweise nicht-monogam",
-      "monosliderpast": null,
-      "experiencewith": "Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)",
-      "gender": "Weiblich",
-      "age": 69,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Mittlere Schulbildung / Hauptschule / Sekundarstufe I",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 221,
+      "id": 199,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3367,7 +3037,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 222,
+      "id": 200,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3382,7 +3052,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 223,
+      "id": 201,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -3397,7 +3067,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 224,
+      "id": 202,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3412,7 +3082,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 225,
+      "id": 203,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3427,7 +3097,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 226,
+      "id": 204,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -3442,7 +3112,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 227,
+      "id": 205,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3457,7 +3127,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 228,
+      "id": 206,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3472,7 +3142,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 229,
+      "id": 207,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -3487,7 +3157,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 230,
+      "id": 208,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3502,7 +3172,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 231,
+      "id": 209,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3517,7 +3187,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 232,
+      "id": 210,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3532,22 +3202,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 233,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 234,
+      "id": 211,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -3562,7 +3217,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 235,
+      "id": 212,
       "identity": null,
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -3577,7 +3232,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 236,
+      "id": 213,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -3592,7 +3247,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 237,
+      "id": 214,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3607,7 +3262,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 238,
+      "id": 215,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -3622,7 +3277,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 239,
+      "id": 216,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3637,7 +3292,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 240,
+      "id": 217,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -3652,7 +3307,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 241,
+      "id": 218,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": null,
@@ -3667,7 +3322,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 242,
+      "id": 219,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -3682,7 +3337,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 243,
+      "id": 220,
       "identity": null,
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher zu",
@@ -3697,22 +3352,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 244,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 245,
+      "id": 221,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3727,7 +3367,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 246,
+      "id": 222,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -3742,7 +3382,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 247,
+      "id": 223,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -3757,7 +3397,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 248,
+      "id": 224,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3772,7 +3412,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 249,
+      "id": 225,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3787,7 +3427,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 250,
+      "id": 226,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3802,7 +3442,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 251,
+      "id": 227,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3817,7 +3457,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 252,
+      "id": 228,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3832,7 +3472,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 253,
+      "id": 229,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -3847,7 +3487,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 254,
+      "id": 230,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -3862,7 +3502,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 255,
+      "id": 231,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": null,
@@ -3877,7 +3517,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 256,
+      "id": 232,
       "identity": "Eher monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Teils/teils",
@@ -3892,7 +3532,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 257,
+      "id": 233,
       "identity": null,
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -3907,7 +3547,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 258,
+      "id": 234,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -3922,7 +3562,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 259,
+      "id": 235,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -3937,7 +3577,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 260,
+      "id": 236,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": null,
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3952,7 +3592,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 261,
+      "id": 237,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -3967,7 +3607,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 262,
+      "id": 238,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3982,7 +3622,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 263,
+      "id": 239,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -3997,52 +3637,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 264,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 265,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 266,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": "Nein, aber ich hatte schon mal eine Beziehung",
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)",
-      "gender": "Weiblich",
-      "age": 51,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Mittlere Schulbildung / Hauptschule / Sekundarstufe I",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 267,
+      "id": 240,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4057,7 +3652,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 268,
+      "id": 241,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4072,7 +3667,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 269,
+      "id": 242,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -4087,7 +3682,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 270,
+      "id": 243,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4102,7 +3697,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 271,
+      "id": 244,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -4117,22 +3712,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 272,
-      "identity": null,
-      "identityimportance": "Teils / teils",
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": "Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)",
-      "gender": "Weiblich",
-      "age": 79,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": "Fachschulen/Meister/Techniker*in / BHS / Fachmatura",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 273,
+      "id": 245,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": null,
@@ -4147,7 +3727,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 274,
+      "id": 246,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4162,22 +3742,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 275,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 276,
+      "id": 247,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4192,7 +3757,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 277,
+      "id": 248,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": null,
@@ -4207,7 +3772,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 278,
+      "id": 249,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -4222,7 +3787,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 279,
+      "id": 250,
       "identity": "Eher monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4237,22 +3802,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 280,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 281,
+      "id": 251,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -4267,7 +3817,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 282,
+      "id": 252,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -4282,7 +3832,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 283,
+      "id": 253,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Teils/teils",
@@ -4297,7 +3847,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 284,
+      "id": 254,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4312,7 +3862,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 285,
+      "id": 255,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4327,7 +3877,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 286,
+      "id": 256,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -4342,7 +3892,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 287,
+      "id": 257,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4357,7 +3907,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 288,
+      "id": 258,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4372,7 +3922,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 289,
+      "id": 259,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -4387,7 +3937,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 290,
+      "id": 260,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4402,7 +3952,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 291,
+      "id": 261,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4417,7 +3967,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 292,
+      "id": 262,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4432,7 +3982,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 293,
+      "id": 263,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -4447,7 +3997,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 294,
+      "id": 264,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4462,7 +4012,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 295,
+      "id": 265,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -4477,7 +4027,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 296,
+      "id": 266,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": null,
@@ -4492,7 +4042,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 297,
+      "id": 267,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4507,7 +4057,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 298,
+      "id": 268,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -4522,7 +4072,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 299,
+      "id": 269,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -4537,7 +4087,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 300,
+      "id": 270,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -4552,7 +4102,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 301,
+      "id": 271,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -4567,7 +4117,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 302,
+      "id": 272,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -4582,7 +4132,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 303,
+      "id": 273,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4597,7 +4147,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 304,
+      "id": 274,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -4612,7 +4162,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 305,
+      "id": 275,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4627,7 +4177,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 306,
+      "id": 276,
       "identity": "Eher monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -4642,7 +4192,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 307,
+      "id": 277,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4657,7 +4207,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 308,
+      "id": 278,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4672,7 +4222,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 309,
+      "id": 279,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -4687,22 +4237,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 310,
-      "identity": null,
-      "identityimportance": "Eher nicht wichtig",
-      "identitythink": null,
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": "Vollständig monogam",
-      "monosliderpast": null,
-      "experiencewith": ["Single (keine feste Partnerschaft und keine gelegentlichen sexuellen Kontakte)", "Single mit einem*r unverbindlichen Liebhaber*in (Situationship / Friendship plus)"],
-      "gender": "Männlich",
-      "age": 46,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": "Universitärer Abschluss (Bachelor, Master, Diplom, Staatsexamen)",
-      "educationBucket": "Uni-Abschluss / Promotion"
-    },
-    {
-      "id": 311,
+      "id": 280,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -4717,7 +4252,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 312,
+      "id": 281,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -4732,7 +4267,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 313,
+      "id": 282,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft eher nicht zu",
@@ -4747,37 +4282,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 314,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 61,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 315,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 316,
+      "id": 283,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4792,7 +4297,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 317,
+      "id": 284,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -4807,7 +4312,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 318,
+      "id": 285,
       "identity": null,
       "identityimportance": null,
       "identitythink": null,
@@ -4822,22 +4327,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 319,
-      "identity": "Eher nicht-monogam",
-      "identityimportance": "Teils / teils",
-      "identitythink": "Trifft überhaupt nicht zu",
-      "currentlyinrel": "Ja, eine",
-      "monoslidercur": "Phasenweise monogam, phasenweise nicht-monogam",
-      "monosliderpast": null,
-      "experiencewith": "Monogame Beziehung (auf Dauer ausgelegte emotionale und sexuelle Exklusivität mit einer einzigen Partnerperson)",
-      "gender": "Weiblich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": "Berufliche Ausbildung (Lehre, EFZ, duale Ausbildung)",
-      "educationBucket": "Ohne Uni-Abschluss"
-    },
-    {
-      "id": 320,
+      "id": 286,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -4852,22 +4342,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 321,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 322,
+      "id": 287,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4882,7 +4357,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 323,
+      "id": 288,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -4897,22 +4372,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 324,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 325,
+      "id": 289,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -4927,7 +4387,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 326,
+      "id": 290,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4942,7 +4402,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 327,
+      "id": 291,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -4957,52 +4417,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 328,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 58,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 329,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 72,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 330,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 72,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 331,
+      "id": 292,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5017,7 +4432,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 332,
+      "id": 293,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -5032,7 +4447,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 333,
+      "id": 294,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5047,7 +4462,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 334,
+      "id": 295,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5062,82 +4477,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 335,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 61,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 336,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 73,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 337,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 338,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 61,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 339,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 340,
+      "id": 296,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -5152,22 +4492,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 341,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 74,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 342,
+      "id": 297,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -5182,7 +4507,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 343,
+      "id": 298,
       "identity": "Eher monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher zu",
@@ -5197,7 +4522,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 344,
+      "id": 299,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Teils/teils",
@@ -5212,7 +4537,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 345,
+      "id": 300,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5227,7 +4552,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 346,
+      "id": 301,
       "identity": "Eher nicht-monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5242,7 +4567,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 347,
+      "id": 302,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5257,7 +4582,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 348,
+      "id": 303,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5272,37 +4597,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 349,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 71,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 350,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 71,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 351,
+      "id": 304,
       "identity": "Vollständig monogam",
       "identityimportance": null,
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5317,22 +4612,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 352,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 72,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 353,
+      "id": 305,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -5347,52 +4627,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 354,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 72,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 355,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 65,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 356,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 357,
+      "id": 306,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -5407,217 +4642,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 358,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 72,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 359,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 47,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 360,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 47,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 361,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 47,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 362,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 57,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 363,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 73,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 364,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 73,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 365,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 73,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 366,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 367,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 21,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 368,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 369,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 58,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 370,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 371,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 58,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 372,
+      "id": 307,
       "identity": "Vollständig monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5632,22 +4657,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 373,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 67,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 374,
+      "id": 308,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher nicht wichtig",
       "identitythink": "Teils/teils",
@@ -5662,97 +4672,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 375,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 376,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 377,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 378,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 379,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 380,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 381,
+      "id": 309,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -5767,22 +4687,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 382,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 40,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 383,
+      "id": 310,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -5797,37 +4702,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 384,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Divers",
-      "age": 40,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 385,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 35,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 386,
+      "id": 311,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher zu",
@@ -5842,52 +4717,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 387,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 35,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 388,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 389,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 48,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 390,
+      "id": 312,
       "identity": "Eher monogam",
       "identityimportance": "Teils / teils",
       "identitythink": "Teils/teils",
@@ -5902,52 +4732,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 391,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 44,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 392,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 40,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 393,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 40,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 394,
+      "id": 313,
       "identity": "Phasenweise monogam, phasenweise nicht-monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft voll zu",
@@ -5962,7 +4747,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 395,
+      "id": 314,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -5977,7 +4762,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 396,
+      "id": 315,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Teils/teils",
@@ -5992,7 +4777,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Studiennah / Hochschulzugang"
     },
     {
-      "id": 397,
+      "id": 316,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -6007,7 +4792,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 398,
+      "id": 317,
       "identity": "Vollständig monogam",
       "identityimportance": "Gar nicht wichtig",
       "identitythink": "Teils/teils",
@@ -6022,7 +4807,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 399,
+      "id": 318,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft eher nicht zu",
@@ -6037,7 +4822,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 400,
+      "id": 319,
       "identity": "Vollständig nicht-monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft voll zu",
@@ -6052,37 +4837,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 401,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 68,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 402,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 31,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 403,
+      "id": 320,
       "identity": "Vollständig monogam",
       "identityimportance": "Eher wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -6097,37 +4852,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Uni-Abschluss / Promotion"
     },
     {
-      "id": 404,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Keine Angabe",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 405,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 33,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 406,
+      "id": 321,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -6142,7 +4867,7 @@ window.BILENDI_DASHBOARD_DATA =
       "educationBucket": "Ohne Uni-Abschluss"
     },
     {
-      "id": 407,
+      "id": 322,
       "identity": "Vollständig monogam",
       "identityimportance": "Sehr wichtig",
       "identitythink": "Trifft überhaupt nicht zu",
@@ -6155,276 +4880,6 @@ window.BILENDI_DASHBOARD_DATA =
       "ageGroup": "Jünger / gleich Median (<= 49)",
       "education": "Universitärer Abschluss (Bachelor, Master, Diplom, Staatsexamen)",
       "educationBucket": "Uni-Abschluss / Promotion"
-    },
-    {
-      "id": 408,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 76,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 409,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 25,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 410,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 33,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 411,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 41,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 412,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 30,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 413,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 53,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 414,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 28,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 415,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 28,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 416,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 25,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 417,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 75,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 418,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 65,
-      "ageGroup": "Älter als Median (> 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 419,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 40,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 420,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 34,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 421,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 35,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 422,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 33,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 423,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": null,
-      "ageGroup": "Keine Angabe",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 424,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Weiblich",
-      "age": 28,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
-    },
-    {
-      "id": 425,
-      "identity": null,
-      "identityimportance": null,
-      "identitythink": null,
-      "currentlyinrel": null,
-      "monoslidercur": null,
-      "monosliderpast": null,
-      "experiencewith": [],
-      "gender": "Männlich",
-      "age": 26,
-      "ageGroup": "Jünger / gleich Median (<= 49)",
-      "education": null,
-      "educationBucket": "Keine Angabe"
     }
   ]
 }
