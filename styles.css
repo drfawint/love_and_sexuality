@@ -88,6 +88,13 @@ a {
   margin: 24px auto 48px;
 }
 
+.subgroup-block,
+.bivariate-card,
+.team-strip {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}
+
 .proposal-intro {
   margin-bottom: 20px;
   border-top: 4px solid var(--uzh-blue);

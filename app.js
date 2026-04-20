@@ -30,13 +30,11 @@ const state = {
   bivariateRow: "gender",
   bivariateCol: "identity",
   groupA: {
-    label: "Frauen",
     genders: ["Weiblich"],
     ageGroup: "all",
     educationBuckets: [...allEducationBuckets],
   },
   groupB: {
-    label: "Männer",
     genders: ["Männlich"],
     ageGroup: "all",
     educationBuckets: [...allEducationBuckets],
@@ -78,6 +76,9 @@ const ui = {
   bivariateTable: document.getElementById("bivariate-table"),
   heroSampleSize: document.getElementById("hero-sample-size"),
 };
+
+let deferredRenderFrame = 0;
+let renderVersion = 0;
 
 function formatPct(value) {
   return `${value.toFixed(1).replace(".", ",")} %`;
@@ -156,9 +157,8 @@ function describeGroup(group) {
   return parts;
 }
 
-function getGroupLabel(group, fallback) {
-  const label = group.label.trim();
-  return label || fallback;
+function getGroupDescriptor(group) {
+  return describeGroup(group).join(" · ");
 }
 
 function matchesGroup(record, group) {
@@ -179,10 +179,22 @@ function filterRecords(group) {
 }
 
 function valueShares(groupRecords, key, categories) {
-  const valid = groupRecords.filter((record) => Boolean(record[key]));
-  const denominator = valid.length;
+  const counts = new Map(categories.map((category) => [category, 0]));
+  let denominator = 0;
+
+  groupRecords.forEach((record) => {
+    const value = record[key];
+    if (!value) {
+      return;
+    }
+    denominator += 1;
+    if (counts.has(value)) {
+      counts.set(value, counts.get(value) + 1);
+    }
+  });
+
   const shares = categories.map((category) => {
-    const count = valid.filter((record) => record[key] === category).length;
+    const count = counts.get(category) || 0;
     return {
       category,
       count,
@@ -193,10 +205,24 @@ function valueShares(groupRecords, key, categories) {
 }
 
 function experienceShares(groupRecords) {
-  const valid = groupRecords.filter((record) => experienceValues(record).length > 0);
-  const denominator = valid.length;
+  const counts = new Map(meta.experienceItems.map((item) => [item, 0]));
+  let denominator = 0;
+
+  groupRecords.forEach((record) => {
+    const values = experienceValues(record);
+    if (!values.length) {
+      return;
+    }
+    denominator += 1;
+    values.forEach((value) => {
+      if (counts.has(value)) {
+        counts.set(value, counts.get(value) + 1);
+      }
+    });
+  });
+
   const rows = meta.experienceItems.map((item) => {
-    const count = valid.filter((record) => experienceValues(record).includes(item)).length;
+    const count = counts.get(item) || 0;
     return {
       item,
       count,
@@ -376,31 +402,12 @@ function buildAgeToggle(namePrefix, selectedValue, onChange) {
   return wrapper;
 }
 
-function renderGroupControls(target, stateKey, fallbackLabel) {
+function renderGroupControls(target, stateKey) {
   const group = state[stateKey];
   target.innerHTML = "";
 
   const form = document.createElement("div");
   form.className = "group-form";
-
-  const labelWrap = document.createElement("div");
-  labelWrap.className = "group-section";
-  const labelLabel = document.createElement("label");
-  const labelHint = document.createElement("span");
-  labelHint.className = "control-help";
-  labelHint.textContent = "Gruppenname";
-  const textInput = document.createElement("input");
-  textInput.className = "text-input";
-  textInput.type = "text";
-  textInput.value = getGroupLabel(group, fallbackLabel);
-  textInput.placeholder = fallbackLabel;
-  appendChildren(labelLabel, [labelHint, textInput]);
-  labelWrap.appendChild(labelLabel);
-  textInput.addEventListener("input", (event) => {
-    state[stateKey].label = event.target.value;
-    renderAll();
-  });
-  form.appendChild(labelWrap);
 
   const genderSection = document.createElement("div");
   genderSection.className = "group-section";
@@ -491,19 +498,19 @@ function renderGroupControls(target, stateKey, fallbackLabel) {
 }
 
 function renderMetrics(groupARecords, groupBRecords) {
-  const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
-  const groupBLabel = getGroupLabel(state.groupB, "Gruppe B");
+  const groupALabel = getGroupDescriptor(state.groupA);
+  const groupBLabel = getGroupDescriptor(state.groupB);
 
   const cards = [
     {
       title: groupALabel,
       value: `${groupARecords.length}`,
-      sub: describeGroup(state.groupA).join(" · "),
+      sub: "Filterbedingungen für Gruppe A",
     },
     {
       title: groupBLabel,
       value: `${groupBRecords.length}`,
-      sub: describeGroup(state.groupB).join(" · "),
+      sub: "Filterbedingungen für Gruppe B",
     },
   ];
 
@@ -521,8 +528,8 @@ function renderMetrics(groupARecords, groupBRecords) {
 }
 
 function renderExperienceChart(groupARecords, groupBRecords) {
-  const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
-  const groupBLabel = getGroupLabel(state.groupB, "Gruppe B");
+  const groupALabel = getGroupDescriptor(state.groupA);
+  const groupBLabel = getGroupDescriptor(state.groupB);
   const expA = experienceShares(groupARecords);
   const expB = experienceShares(groupBRecords);
 
@@ -571,8 +578,8 @@ function renderOutcomeChart(groupARecords, groupBRecords, selectedKey, stackedWr
   const config = outcomeMap.get(selectedKey);
   const distA = valueShares(groupARecords, config.key, config.categories);
   const distB = valueShares(groupBRecords, config.key, config.categories);
-  const groupALabel = getGroupLabel(state.groupA, "Gruppe A");
-  const groupBLabel = getGroupLabel(state.groupB, "Gruppe B");
+  const groupALabel = getGroupDescriptor(state.groupA);
+  const groupBLabel = getGroupDescriptor(state.groupB);
 
   const bars = [
     { label: groupALabel, distribution: distA },
@@ -631,32 +638,48 @@ function renderOutcomeChart(groupARecords, groupBRecords, selectedKey, stackedWr
 function renderBivariateTable(allRecords) {
   const rowConfig = bivariateMap.get(state.bivariateRow);
   const colConfig = bivariateMap.get(state.bivariateCol);
-  const validRecords = allRecords.filter((record) => Boolean(record[rowConfig.key]) && Boolean(record[colConfig.key]));
+  const rowIndexMap = new Map(rowConfig.categories.map((category, index) => [category, index]));
+  const colIndexMap = new Map(colConfig.categories.map((category, index) => [category, index]));
+  const matrix = rowConfig.categories.map(() => colConfig.categories.map(() => 0));
+  const rowTotals = rowConfig.categories.map(() => 0);
+  const colTotals = colConfig.categories.map(() => 0);
+  let validCount = 0;
+
+  allRecords.forEach((record) => {
+    const rowValue = record[rowConfig.key];
+    const colValue = record[colConfig.key];
+    if (!rowValue || !colValue) {
+      return;
+    }
+
+    const rowIndex = rowIndexMap.get(rowValue);
+    const colIndex = colIndexMap.get(colValue);
+    if (rowIndex === undefined || colIndex === undefined) {
+      return;
+    }
+
+    matrix[rowIndex][colIndex] += 1;
+    rowTotals[rowIndex] += 1;
+    colTotals[colIndex] += 1;
+    validCount += 1;
+  });
 
   ui.bivariateMeta.innerHTML = `
-    <span class="chip">Gültige Fälle für beide Variablen: n = ${validRecords.length}</span>
+    <span class="chip">Gültige Fälle für beide Variablen: n = ${validCount}</span>
     <span class="chip">Zellen zeigen Häufigkeiten und Zeilenprozente</span>
   `;
 
-  if (!validRecords.length) {
+  if (!validCount) {
     ui.bivariateTable.innerHTML = `<p class="block-copy">Keine gemeinsamen gültigen Angaben für diese Variablenkombination.</p>`;
     return;
   }
 
-  const rowTotals = rowConfig.categories.map(
-    (rowCategory) => validRecords.filter((record) => record[rowConfig.key] === rowCategory).length
-  );
-  const colTotals = colConfig.categories.map(
-    (colCategory) => validRecords.filter((record) => record[colConfig.key] === colCategory).length
-  );
-
   const bodyRows = rowConfig.categories
     .map((rowCategory, rowIndex) => {
-      const rowSubset = validRecords.filter((record) => record[rowConfig.key] === rowCategory);
       const rowTotal = rowTotals[rowIndex];
       const cells = colConfig.categories
-        .map((colCategory) => {
-          const count = rowSubset.filter((record) => record[colConfig.key] === colCategory).length;
+        .map((colCategory, colIndex) => {
+          const count = matrix[rowIndex][colIndex];
           const pct = rowTotal ? (count / rowTotal) * 100 : 0;
           const alpha = Math.min(0.88, 0.06 + (pct / 100) * 0.72);
           const textColor = pct >= 52 ? "#ffffff" : "#121212";
@@ -687,7 +710,7 @@ function renderBivariateTable(allRecords) {
 
   const footerTotals = colTotals
     .map((count) => {
-      const pct = validRecords.length ? (count / validRecords.length) * 100 : 0;
+      const pct = validCount ? (count / validCount) * 100 : 0;
       return `
         <td>
           <strong class="bivariate-total">${count}</strong>
@@ -699,7 +722,7 @@ function renderBivariateTable(allRecords) {
 
   const headerColumns = colConfig.categories
     .map((category, index) => {
-      const pct = validRecords.length ? (colTotals[index] / validRecords.length) * 100 : 0;
+      const pct = validCount ? (colTotals[index] / validCount) * 100 : 0;
       return `
         <th scope="col">
           <span class="bivariate-header-label">${escapeHtml(category)}</span>
@@ -726,7 +749,7 @@ function renderBivariateTable(allRecords) {
           <th scope="row">Spaltensumme</th>
           ${footerTotals}
           <td>
-            <strong class="bivariate-total">${validRecords.length}</strong>
+            <strong class="bivariate-total">${validCount}</strong>
             <span class="bivariate-total-sub">100,0 %</span>
           </td>
         </tr>
@@ -736,6 +759,12 @@ function renderBivariateTable(allRecords) {
 }
 
 function renderAll() {
+  renderVersion += 1;
+  const currentRenderVersion = renderVersion;
+  if (deferredRenderFrame) {
+    cancelAnimationFrame(deferredRenderFrame);
+  }
+
   renderOverallMetrics(records);
   renderQuestionText(ui.overallIdentityQuestionText, state.overallIdentityOutcome);
   renderQuestionText(ui.overallRelationshipQuestionText, state.overallRelationshipOutcome);
@@ -753,33 +782,39 @@ function renderAll() {
   );
   renderOverallExperienceChart(records);
 
-  renderGroupControls(ui.groupAControls, "groupA", "Gruppe A");
-  renderGroupControls(ui.groupBControls, "groupB", "Gruppe B");
+  renderGroupControls(ui.groupAControls, "groupA");
+  renderGroupControls(ui.groupBControls, "groupB");
 
-  const groupARecords = filterRecords(state.groupA);
-  const groupBRecords = filterRecords(state.groupB);
+  deferredRenderFrame = requestAnimationFrame(() => {
+    if (currentRenderVersion !== renderVersion) {
+      return;
+    }
 
-  renderMetrics(groupARecords, groupBRecords);
-  renderExperienceChart(groupARecords, groupBRecords);
-  renderQuestionText(ui.identityQuestionText, state.selectedIdentityOutcome);
-  renderQuestionText(ui.relationshipQuestionText, state.selectedRelationshipOutcome);
-  renderOutcomeChart(
-    groupARecords,
-    groupBRecords,
-    state.selectedIdentityOutcome,
-    ui.identityStackedWrapper,
-    ui.identityCategoryTable
-  );
-  renderOutcomeChart(
-    groupARecords,
-    groupBRecords,
-    state.selectedRelationshipOutcome,
-    ui.relationshipStackedWrapper,
-    ui.relationshipCategoryTable
-  );
-  renderQuestionText(ui.bivariateRowQuestionText, state.bivariateRow, "Zeilenfrage");
-  renderQuestionText(ui.bivariateColQuestionText, state.bivariateCol, "Spaltenfrage");
-  renderBivariateTable(records);
+    const groupARecords = filterRecords(state.groupA);
+    const groupBRecords = filterRecords(state.groupB);
+
+    renderMetrics(groupARecords, groupBRecords);
+    renderExperienceChart(groupARecords, groupBRecords);
+    renderQuestionText(ui.identityQuestionText, state.selectedIdentityOutcome);
+    renderQuestionText(ui.relationshipQuestionText, state.selectedRelationshipOutcome);
+    renderOutcomeChart(
+      groupARecords,
+      groupBRecords,
+      state.selectedIdentityOutcome,
+      ui.identityStackedWrapper,
+      ui.identityCategoryTable
+    );
+    renderOutcomeChart(
+      groupARecords,
+      groupBRecords,
+      state.selectedRelationshipOutcome,
+      ui.relationshipStackedWrapper,
+      ui.relationshipCategoryTable
+    );
+    renderQuestionText(ui.bivariateRowQuestionText, state.bivariateRow, "Zeilenfrage");
+    renderQuestionText(ui.bivariateColQuestionText, state.bivariateCol, "Spaltenfrage");
+    renderBivariateTable(records);
+  });
 }
 
 function init() {
